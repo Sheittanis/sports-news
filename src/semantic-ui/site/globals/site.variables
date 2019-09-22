@@ -1,0 +1,11 @@
+/*******************************
+     User Global Variables
+*******************************/
+@primaryTextColor: black;
+@secondaryTextColor: white;
+
+@primaryBgColor: #ec1b2e;
+@secondaryBgColor: #1B1C1D;
+@invertBgColor: white;
+
+@pageBgColor: white;

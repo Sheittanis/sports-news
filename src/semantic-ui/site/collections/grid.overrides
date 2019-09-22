@@ -1,0 +1,20 @@
+/*******************************
+         Site Overrides
+*******************************/
+.ui.grid.gridLayout {
+    min-height: 80vh;
+    margin: 0px;
+}
+
+.ui.grid.pageHeader {
+    min-width: 100vw;
+    // height: 10vh;
+    justify-content: center;
+    margin: 0;
+    .headerBanner {
+        background: @primaryBgColor;
+    }
+    .headerMenu {
+        background: @secondaryBgColor;
+    }
+}

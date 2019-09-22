@@ -1,0 +1,23 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.segment.pageFooter {
+    min-height: 10vh;
+    width: 100vw;
+    margin: 2rem 1rem 0rem 1rem;
+}
+
+.ui.segment.chatBubble {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 25vh;
+    width: 25vw;
+    margin: 2rem 1rem 0rem 1rem;
+    z-index: 10;    
+}
+
+.ui.segment.lastActivity {
+    max-height: 100px;
+}
