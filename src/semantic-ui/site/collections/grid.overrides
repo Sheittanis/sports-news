@@ -1,6 +1,10 @@
 /*******************************
          Site Overrides
 *******************************/
+.ui.grid {
+    max-width: 80vw;
+}
+
 .ui.grid.gridLayout {
     min-height: 80vh;
     margin: 0px;

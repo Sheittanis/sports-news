@@ -12,14 +12,14 @@ const TeamBar = () => {
     // const dynamicHeight = dimensions.width * 0.35;
     const options = (
         data.map((option) =>
-            <a key={option.id} href={option.path} className="margin-1" target="_blank" rel="noopener noreferrer">
+            <a key={option.id} href={option.path} className="margin-1" >
                 <Image src={option.imageSrc} style={{width: dynamicWidth}}></Image>
             </a>
         )
     );
 
     return (
-        <Segment inverted vertical className="socialBar">
+        <Segment inverted vertical className="teamBar">
             <Container>
                 <Grid centered>
                     <Grid.Row>{options}</Grid.Row>

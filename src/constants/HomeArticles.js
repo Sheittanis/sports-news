@@ -2,10 +2,9 @@ import Article1 from "../images/articles/1.jpg";
 import Article2 from "../images/articles/2.jpg";
 import Article3 from "../images/articles/3.jpg";
 
-const BestXmasGameData = {
-    gameTitle: "Best Xmas Game Name Here",
-    description: "Inf",
-    responsibilities: " of the Unity project.'",
+import { loremIpsum } from "../utils"
+
+const HomeArticles = {
     carouselImages: [
         {
             id: 1,
@@ -19,7 +18,36 @@ const BestXmasGameData = {
             id: 3,
             imageSrc: Article3
         },
+    ],
+    articleOverview: [
+        {
+            id: 1,
+            section: loremIpsum(10),
+            header: loremIpsum(25),
+            description: loremIpsum(100),
+            date: "10/09/2019",
+            url: "",
+            imageSrc: Article1
+        },
+        {
+            id: 2,
+            imageSrc: Article2,
+            section: loremIpsum(5),
+            header: loremIpsum(15),
+            description: loremIpsum(100),
+            date: "10/09/2019",
+            url: "",
+        },
+        {
+            id: 3,
+            imageSrc: Article3,
+            section: loremIpsum(14),
+            header: loremIpsum(20),
+            description: loremIpsum(100),
+            date: "10/09/2019",
+            url: "",
+        },
     ]
 };
 
-export default BestXmasGameData;
+export default HomeArticles;
