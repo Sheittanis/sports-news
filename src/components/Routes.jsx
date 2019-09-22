@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import AboutPage from "../pages/AboutPage";
 import FixturesPage from "../pages/FixturesPage";
+import StandingsPage from "../pages/StandingsPage";
 
 const Routes = () => {
     return (            
@@ -11,6 +12,7 @@ const Routes = () => {
             <Route path="/home" component={HomePage} />
             <Route path="/about" component={AboutPage} />
             <Route path="/fixtures" component={FixturesPage} />
+            <Route path="/standings" component={StandingsPage} />
 
             <Redirect to="/home" />
 

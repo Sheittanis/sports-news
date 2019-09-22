@@ -25,8 +25,8 @@ const Fixtures = {
                     team2: PafosCrest,
                     date: "Παρασκευή 23/08/2019",
                     score: "1-2",
-                    location: "GSP",
-                    watch: "",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -36,8 +36,8 @@ const Fixtures = {
                     team2: OmonoiaCrest,
                     date: "Σάββατο 24/08/2019",
                     score: "0-2",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -47,8 +47,8 @@ const Fixtures = {
                     team2: AnorthosiCrest,
                     date: "Κυριακή 25/08/2019",
                     score: "0-0",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -58,8 +58,8 @@ const Fixtures = {
                     team2: EthnikosCrest,
                     date: "Δευτέρα 26/08/2019",
                     score: "3-4",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -69,8 +69,8 @@ const Fixtures = {
                     team2: ApollonCrest,
                     date: "Παρασκευή 27/09/2019",
                     score: " - ",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "",
                     article: " "
                 },
                 {
@@ -80,8 +80,8 @@ const Fixtures = {
                     team2: OlympiakosCrest,
                     date: "Τετάρτη 08/01/2020",
                     score: " - ",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "",
                     article: " "
                 },
             ]
@@ -97,7 +97,7 @@ const Fixtures = {
                     team2: AekCrest,
                     date: "Παρασκευή 30/08/2019",
                     score: "0-2",
-                    location: "GSP",
+                    location: "ΓΣΠ",
                     watch: "",
                     article: "Άρθρο Αγώνα"
                 },
@@ -108,8 +108,8 @@ const Fixtures = {
                     team2: NeaSalaminaCrest,
                     date: "Σάββατο 31/08/2019",
                     score: "2-0",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -119,8 +119,8 @@ const Fixtures = {
                     team2: ParalimniCrest,
                     date: "Σάββατο 31/08/2019",
                     score: "2-0",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -130,8 +130,8 @@ const Fixtures = {
                     team2: DoxaCrest,
                     date: "Κυριακή 01/09/2019",
                     score: "1-1",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
                     article: "Άρθρο Αγώνα"
                 },
                 {
@@ -141,8 +141,8 @@ const Fixtures = {
                     team2: ApoelCrest,
                     date: "Τετάρτη 15/01/2020",
                     score: " - ",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "",
                     article: " "
                 },
                 {
@@ -152,8 +152,8 @@ const Fixtures = {
                     team2: ApollonCrest,
                     date: "Τετάρτη 02/10/2019",
                     score: " - ",
-                    location: "GSP",
-                    watch: "ltv",
+                    location: "ΓΣΠ",
+                    watch: "",
                     article: " "
                 },
             ]

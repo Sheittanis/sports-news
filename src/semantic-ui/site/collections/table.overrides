@@ -1,3 +1,42 @@
 /*******************************
          Site Overrides
 *******************************/
+.ui.table {
+    border: 1px solid rgba(34, 36, 38, 1);
+
+    thead {
+        tr {
+            th {
+                font-size: calc(10px + 1.5vmin);
+                // color: rgba(44, 52, 70, 0.32);
+            }
+        }
+    }
+
+    thead.standingsTable {
+        tr {
+            th {
+                font-size: calc(10px + 1vmin);
+            }
+        }
+    }
+
+    tbody {
+        tr:hover {
+            background: linear-gradient(#337CAB, #000000) !important;
+            color: white !important;
+
+            td {
+                h5 {
+                    color: white
+                }
+            }
+        }
+
+        tr {
+            th.subHeader {
+                background: rgba(44, 52, 70, 0.32);
+            }
+        }
+    }
+}

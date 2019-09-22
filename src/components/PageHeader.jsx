@@ -61,6 +61,8 @@ class DesktopContainer extends Component {
               <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size='large' >
                 <Container className="justifyCenter">
                   <Menu.Item as={NavLink} to="/home" ><Icon name='home'></Icon></Menu.Item>
+                  <Menu.Item as={NavLink} to="/fixtures" >Πρόγραμμα</Menu.Item>
+                  <Menu.Item as={NavLink} to="/standings" >Βαθμολογία</Menu.Item>
                 </Container>
               </Menu>
             </Grid.Row>

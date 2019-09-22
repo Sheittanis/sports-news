@@ -1,4 +1,3 @@
-
 .App-link {
   color: #61dafb;
 }
@@ -10,4 +9,12 @@
 /* Styling wildcards */
 .underline {
   text-decoration: underline;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
 }

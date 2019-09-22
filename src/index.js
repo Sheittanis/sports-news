@@ -5,6 +5,8 @@ import App from './App';
 import { BrowserRouter } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 import 'semantic-ui-less/semantic.less'
+import 'pace-js'
+import 'pace-js/themes/yellow/pace-theme-minimal.css'
 
 ReactDOM.render( <BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
 
