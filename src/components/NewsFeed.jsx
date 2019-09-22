@@ -7,7 +7,6 @@ const NewsFeed = (props) => {
     const articles = (
         props.feed.map((option) =>
             <Segment style={{ margin: '1rem' }}>
-
                 <Feed.Event>
                     <Feed.Label >{option.date} - {option.header}</Feed.Label>
                     <Feed.Content>

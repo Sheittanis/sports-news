@@ -2,8 +2,6 @@ import React from 'react'
 import { Segment, Container, Grid, Header, Image } from 'semantic-ui-react'
 import PreviewExample from "../images/previews/previewTemplate.jpg"
 
-// import data from "../constants/SocialBarOptions"
-
 const ArticleOverview = (props) => {
 
     const articles = (
