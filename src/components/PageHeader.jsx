@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility, Grid, Header, Label, Confirm } from 'semantic-ui-react'
+import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility, Grid, Header } from 'semantic-ui-react'
 
+import {getCurrentDate} from "../utils"
 import { NavLink } from "react-router-dom";
+
+const dateNow = getCurrentDate();
 
 const getWidth = () => {
   const isSSR = typeof window === 'undefined'
@@ -22,57 +25,47 @@ HomepageHeading.propTypes = {
 }
 
 class DesktopContainer extends Component {
-  state = {}
+    state = { open: false }
+  open = () => this.setState({ open: true })
+  close = () => this.setState({ open: false })
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
+  handleSidebarHide = () => this.setState({ sidebarOpened: false })
+  handleToggle = () => this.setState({ sidebarOpened: true })
 
   render() {
     // const { children } = this.props
-    const { fixed } = this.state
+    const { fixed, sidebarOpened } = this.state
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
+          <Sidebar as={Menu} animation='push' inverted onHide={this.handleSidebarHide} vertical visible={sidebarOpened} style={{ minWidth: '20vw' }}>
+            <Menu.Item as={NavLink} to="/home" onClick={this.handleSidebarHide} >TO DO</Menu.Item>
+          </Sidebar>
           <Grid className="pageHeader" inverted>
-                        <Grid.Row className="headerBanner" columns={3}>
-                            <Grid.Column>
-                                <Icon name='sidebar' onClick={this.handleToggle}></Icon>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <Header as='h1'>MAPPES</Header>
-                            </Grid.Column>
-                            <Grid.Column>
-                                <span>
-                                    <Icon name='alarm'></Icon>
-                                    <Label color='red' floating>22</Label>
-                                </span>
-                                <Icon name='search'></Icon>
-                                <Icon name='user'></Icon>
-                                <Icon name='sign out' onClick={this.open}></Icon>
-                                <Confirm
-                                    open={this.state.open}
-                                    onCancel={this.close}
-                                    onConfirm={this.close}
-                                />
-                            </Grid.Column>
-                        </Grid.Row>
-                        <Grid.Row className="headerMenu">
-                            <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size='large' >
-                                <Container className="justifyCenter">
-                                    <Menu.Item as={NavLink} to="/home" >Dashboard</Menu.Item>
-                                    <Menu.Item as={NavLink} to="/accounts" >Accounts</Menu.Item>
-                                    <Menu.Item as={NavLink} to="/transfers" >Transfers</Menu.Item>
-                                    <Menu.Item as={NavLink} to="/accountmanagement" >Account Management</Menu.Item>
-                                    <Menu.Item as={NavLink} to="/fraud" >Fraud</Menu.Item>
-                                    <Menu.Item as={NavLink} to="/about" >About</Menu.Item>
-                                </Container>
-                            </Menu>
-                        </Grid.Row>
-                    </Grid>
-
+            <Grid.Row className="headerBanner" columns={3}>
+              <Grid.Column>
+                <Header as='h4'>{dateNow}</Header>
+                <Icon name='sidebar' onClick={this.handleToggle}></Icon>
+              </Grid.Column>
+              <Grid.Column>
+                <Header as='h1'>MAPPES</Header>
+              </Grid.Column>
+              <Grid.Column>
+                <Icon name='search'></Icon>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row className="headerMenu">
+              <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size='large' >
+                <Container className="justifyCenter">
+                  <Menu.Item as={NavLink} to="/home" ><Icon name='home'></Icon></Menu.Item>
+                </Container>
+              </Menu>
+            </Grid.Row>
+          </Grid>
         </Visibility>
-
       </Responsive>
     )
   }
@@ -86,7 +79,7 @@ class MobileContainer extends Component {
   handleSidebarHide = () => this.setState({ sidebarOpened: false, heightExpanded: 75 })
   navigate = (nav) => {
     this.handleSidebarHide();
-    this.setState({  currentNavigation: nav })
+    this.setState({ currentNavigation: nav })
   }
 
   handleToggle = () => this.setState({ sidebarOpened: true, heightExpanded: 350 })
@@ -98,8 +91,7 @@ class MobileContainer extends Component {
       <Responsive as={Sidebar.Pushable} getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar as={Menu} animation='push' inverted onHide={this.handleSidebarHide} vertical visible={sidebarOpened} style={{ minWidth: '100vw' }}>
           <Menu.Item as={NavLink} to="/home" onClick={() => this.navigate("Home")} >Home <Icon name='home' size='large' color='teal'></Icon></Menu.Item>
-               </Sidebar>
-
+        </Sidebar>
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment inverted textAlign='center' style={{ minWidth: '100vw', padding: '1em 0em', height: heightExpanded }} vertical>
             <Container>
