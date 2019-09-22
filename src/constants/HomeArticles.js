@@ -22,12 +22,12 @@ const HomeArticles = {
     articleOverview: [
         {
             id: 1,
+            imageSrc: Article1,
             section: loremIpsum(10),
             header: loremIpsum(25),
             description: loremIpsum(100),
             date: "10/09/2019",
-            url: "",
-            imageSrc: Article1
+            url: ""
         },
         {
             id: 2,

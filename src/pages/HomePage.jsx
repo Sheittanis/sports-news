@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { Header, Grid, Segment } from 'semantic-ui-react'
+import { Grid } from 'semantic-ui-react'
 import ArticleCarousel from "../components/ArticleCarousel"
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
@@ -13,7 +13,6 @@ const HomePage = () => {
 
   return (
     <Grid centered >
-
       <Grid.Row columns={2}>
         <Grid.Column width={10}>
           <ArticleCarousel data={data.carouselImages}></ArticleCarousel>

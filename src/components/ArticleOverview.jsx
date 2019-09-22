@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Segment, Container, Grid, Header, Image, Icon } from 'semantic-ui-react'
+import { Segment, Container, Grid, Header, Image } from 'semantic-ui-react'
 import PreviewExample from "../images/previews/previewTemplate.jpg"
 
 // import data from "../constants/SocialBarOptions"
