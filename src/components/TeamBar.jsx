@@ -3,7 +3,7 @@ import { Image, Segment, Container, Grid } from 'semantic-ui-react'
 
 import windowDimensions from "../actions/WindowDimensions"
 import data from "../constants/TeamBarOptions"
-
+import {Link} from "react-router-dom"
 
 const TeamBar = () => {
     var dimensions = windowDimensions();
@@ -12,9 +12,7 @@ const TeamBar = () => {
     // const dynamicHeight = dimensions.width * 0.35;
     const options = (
         data.map((option) =>
-            <a key={option.id} href={option.path} className="margin-1" >
-                <Image src={option.imageSrc} style={{width: dynamicWidth}}></Image>
-            </a>
+            <Image key={option.id} as={Link} to={option.path} className="margin-1" src={option.imageSrc} style={{ width: dynamicWidth }}></Image>
         )
     );
 

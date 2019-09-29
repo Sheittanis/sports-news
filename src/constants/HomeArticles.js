@@ -5,17 +5,20 @@ import Article3 from "../images/articles/3.jpg";
 import { loremIpsum } from "../utils"
 
 const HomeArticles = {
-    carouselImages: [
+    breakingArticle: {        
+        imageSrc: Article1,
+        header: loremIpsum(25),
+        description: loremIpsum(125),
+        peek: loremIpsum(300),
+    },
+    latestNewsData: [
         {
-            id: 1,
             imageSrc: Article1
         },
         {
-            id: 2,
             imageSrc: Article2
         },
         {
-            id: 3,
             imageSrc: Article3
         },
     ],

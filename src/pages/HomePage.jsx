@@ -1,7 +1,6 @@
 
 import React from 'react'
-import { Grid } from 'semantic-ui-react'
-import ArticleCarousel from "../components/ArticleCarousel"
+import { Grid, Image, Header, Popup, Segment } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
@@ -11,14 +10,35 @@ import data from "../constants/HomeArticles"
 
 const HomePage = () => {
 
+  const latestNews = (
+    data.latestNewsData.map((_project, index) =>
+      <Image key={index} src={_project.imageSrc}></Image>
+    )
+  );
+
   return (
     <Grid centered >
       <Grid.Row columns={2}>
         <Grid.Column width={10}>
-          <ArticleCarousel data={data.carouselImages}></ArticleCarousel>
+          <Popup
+            trigger={
+              <Segment>
+                <Image src={data.breakingArticle.imageSrc}></Image>
+                <Header as='h2' color="orange">{data.breakingArticle.header}</Header>
+                <p>{data.breakingArticle.description}</p>
+              </Segment>
+            }
+          >
+            <Popup.Header>Peek</Popup.Header>
+            <Popup.Content>
+              <p>{data.breakingArticle.peek}</p>
+            </Popup.Content>
+          </Popup>
+
+
         </Grid.Column>
         <Grid.Column width={6}>
-          <ArticleCarousel data={data.carouselImages}></ArticleCarousel>
+          {latestNews}
         </Grid.Column>
       </Grid.Row>
 

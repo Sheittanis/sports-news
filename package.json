@@ -7,7 +7,6 @@
     "moment": "^2.24.0",
     "pace": "0.0.4",
     "pace-js": "^1.0.2",
-    "pure-react-carousel": "^1.22.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.0.1",

@@ -48,12 +48,12 @@ const Fixtures = (props) => {
             <Table striped celled textAlign="center">
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Ομάδες</Table.HeaderCell>
-                        <Table.HeaderCell>Ημερομηνία</Table.HeaderCell>
-                        <Table.HeaderCell>Αποτέλεσμα</Table.HeaderCell>
-                        <Table.HeaderCell>Γήπεδο</Table.HeaderCell>
-                        <Table.HeaderCell>Στιγμιότυπα</Table.HeaderCell>
-                        <Table.HeaderCell>Άρθρο</Table.HeaderCell>
+                        <Table.HeaderCell>Teams</Table.HeaderCell>
+                        <Table.HeaderCell>Date</Table.HeaderCell>
+                        <Table.HeaderCell>Result</Table.HeaderCell>
+                        <Table.HeaderCell>Location</Table.HeaderCell>
+                        <Table.HeaderCell>Highlights</Table.HeaderCell>
+                        <Table.HeaderCell>Read more..</Table.HeaderCell>
                     </Table.Row>
                 </Table.Header>
 

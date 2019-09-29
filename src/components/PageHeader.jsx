@@ -51,7 +51,7 @@ class DesktopContainer extends Component {
                 <Icon name='sidebar' onClick={this.handleToggle}></Icon>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h1'>MAPPES</Header>
+                <Header as='h1' style={{display: 'inline'}}><Icon name='soccer'></Icon> MONO MAPPES <Icon name='soccer'></Icon> </Header>
               </Grid.Column>
               <Grid.Column>
                 <Icon name='search'></Icon>
@@ -61,8 +61,8 @@ class DesktopContainer extends Component {
               <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size='large' >
                 <Container className="justifyCenter">
                   <Menu.Item as={NavLink} to="/home" ><Icon name='home'></Icon></Menu.Item>
-                  <Menu.Item as={NavLink} to="/fixtures" >Πρόγραμμα</Menu.Item>
-                  <Menu.Item as={NavLink} to="/standings" >Βαθμολογία</Menu.Item>
+                  <Menu.Item as={NavLink} to="/fixtures" >Fixtures</Menu.Item>
+                  <Menu.Item as={NavLink} to="/standings" >Standings</Menu.Item>
                 </Container>
               </Menu>
             </Grid.Row>

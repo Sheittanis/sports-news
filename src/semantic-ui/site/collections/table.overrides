@@ -8,6 +8,8 @@
         tr {
             th {
                 font-size: calc(10px + 1.5vmin);
+                background: #EC1B2E;
+                color: white;
                 // color: rgba(44, 52, 70, 0.32);
             }
         }
