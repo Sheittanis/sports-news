@@ -5,8 +5,8 @@ import PreviewExample from "../images/previews/previewTemplate.jpg"
 const ArticleOverview = (props) => {
 
     const articles = (
-        props.articles.map((option) =>
-            <Segment style={{margin: '1rem'}}>
+        props.articles.map((option, index) =>
+            <Segment key={index} style={{margin: '1rem'}}>
                 <Grid>
                     <Grid.Row columns={2}>
                         <Grid.Column >

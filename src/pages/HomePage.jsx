@@ -4,7 +4,6 @@ import { Grid, Image, Header, Popup, Segment } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
-import "pure-react-carousel/dist/react-carousel.es.css";
 import data from "../constants/HomeArticles"
 
 

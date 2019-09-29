@@ -11,80 +11,98 @@ import OmonoiaCrest from "../images/crests/omonoia.png";
 import PafosCrest from "../images/crests/pafos.png";
 import ParalimniCrest from "../images/crests/paralimni.png";
 
+const ApoelData = {
+    teamName: "ΑΠΟΕΛ",
+    crest: ApoelCrest,
+    history: "Ο ΑΠΟΕΛ ιδρύθηκε το 1926.",
+}
+const OmonoiaData = {
+    teamName: "ΟΜΟΝΟΙΑ",
+    crest: OmonoiaCrest,
+    history: "Ο ΟΜΟΝΟΙΑ ιδρύθηκε το 1926.",
+}
+
+
 
 const options = [
   {
-    id: 1,
     name: "Aek",
     path: "/aek",
     imageSrc: AekCrest
   },
   {
-    id: 2,
     name: "Ael",
     path: "/ael",
     imageSrc: AelCrest
   },
   {
-    id: 3,
     name: "Anorthosi",
     path: "/anorthosi",
     imageSrc: AnorthosiCrest
   },
   {
-    id: 4,
     name: "Apoel",
     path: "/apoel",
     imageSrc: ApoelCrest,
+    teamData: ApoelData
   },
   {
-    id: 5,
     name: "Apollon",
     path: "/apollon",
     imageSrc: ApollonCrest
   },
   {
-    id: 6,
     name: "Doxa",
     path: "/doxa",
     imageSrc: DoxaCrest
   },
   {
-    id: 7,
     name: "Ethnikos",
     path: "/ethnikos",
     imageSrc: EthnikosCrest
   },
   {
-    id: 8,
     name: "Nea Salamina",
     path: "/neasalamina",
     imageSrc: NeaSalaminaCrest
   },
   {
-    id: 9,
     name: "Olympiakos",
     path: "/olympiakos",
     imageSrc: OlympiakosCrest
   },
   {
-    id: 10,
     name: "Omonoia",
     path: "/omonoia",
     imageSrc: OmonoiaCrest
   },
   {
-    id: 11,
     name: "Pafos",
     path: "/pafos",
     imageSrc: PafosCrest
   },
   {
-    id: 12,
     name: "Paralimni",
     path: "/paralimni",
     imageSrc: ParalimniCrest
   },
 ];
 
+export function fetchTeamData(team){
+    switch (team) {
+        case "apoel":
+            return ApoelData;
+        case "omonoia":
+            return OmonoiaData;
+        // case "StorytellerThumb":
+        //     return StorytellerThumb;
+        // case "TanabataThumb":
+        //     return TanabataThumb;
+        // case "ConfessionThumb":
+        //     return ConfessionThumb
+
+        default:
+            return " "
+    }   
+}
 export default options;

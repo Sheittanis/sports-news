@@ -1,12 +1,12 @@
 import React from 'react'
-import { Header, Segment, Card, Feed, List } from 'semantic-ui-react'
+import { Header, Segment, Feed } from 'semantic-ui-react'
 
 const NewsFeed = (props) => {
 
 
     const articles = (
-        props.feed.map((option) =>
-            <Segment style={{ margin: '1rem' }}>
+        props.feed.map((option, index) =>
+            <Segment key={index} style={{ margin: '1rem' }}>
                 <Feed.Event>
                     <Feed.Label >{option.date} - {option.header}</Feed.Label>
                     <Feed.Content>

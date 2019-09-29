@@ -5,14 +5,29 @@ import windowDimensions from "../actions/WindowDimensions"
 import data from "../constants/TeamBarOptions"
 import {Link} from "react-router-dom"
 
-const TeamBar = () => {
+const TeamBarOption= (props) => {
+    const {option} = props;
     var dimensions = windowDimensions();
 
     const dynamicWidth = dimensions.width * 0.06;
     // const dynamicHeight = dimensions.width * 0.35;
+    const newTo = {
+        pathname: "/team" + option.path,
+        team: option.name
+    };
+    return (
+        <Segment inverted vertical className="teamBar">
+            <Image className="teamOption margin-1" key={option.id} as={Link} to={newTo} //'/team' + option.path + '/:id' 
+            src={option.imageSrc} style={{ width: dynamicWidth }}/>
+        </Segment>
+    )
+}
+
+const TeamBar = () => {
     const options = (
-        data.map((option) =>
-            <Image key={option.id} as={Link} to={option.path} className="margin-1" src={option.imageSrc} style={{ width: dynamicWidth }}></Image>
+        data.map((option, index) => <TeamBarOption key={index} option={option}></TeamBarOption>
+            // <Image className="teamOption margin-1" key={option.id} as={Link} to={newTo} //'/team' + option.path + '/:id' 
+            // src={option.imageSrc} style={{ width: dynamicWidth }}/>
         )
     );
 
@@ -28,3 +43,4 @@ const TeamBar = () => {
 }
 
 export default TeamBar
+

@@ -1,3 +1,6 @@
 /*******************************
          Site Overrides
 *******************************/
+.ui.image.teamOption:hover {
+    background: #EC1B2E;
+}

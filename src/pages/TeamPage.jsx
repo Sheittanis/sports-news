@@ -1,14 +1,25 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import { Grid, Image, Segment, Container, Header } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
 import data from "../constants/HomeArticles"
 import ApoelCrest from "../images/crests/apoel.png";
-import { loremIpsum } from "../utils"
 
-const HomePage = () => {
+import { fetchTeamData } from "../constants/TeamPageData"
+import { loremIpsum, useEffectAsync } from "../utils"
+
+const TeamPage = (props) => {
+    const [info, setInfo] = useState([]);
+// console.log(props)
+    useEffectAsync(async () => {
+        
+// console.log(props.location.team)
+// console.log(props.match.params.teamId)
+        const items = await fetchTeamData(props.match.params.teamId);
+        setInfo(items);
+    }, [props]);
 
     return (
         <Grid centered >
@@ -16,13 +27,13 @@ const HomePage = () => {
             <Segment inverted>
                 <Grid>
                     <Grid.Row columns={2} only={'computer'} >
-                        <Grid.Column width={4}  style={{ alignItems: 'center', display: 'flex',borderRight: '1px solid white' }} >
-                            <Image src={ApoelCrest} />
-                            <Header as='h1' color='orange'>ΑΠΟΕΛ</Header>
+                        <Grid.Column width={4} style={{ alignItems: 'center', display: 'flex', borderRight: '1px solid white' }} >
+                            <Image src={info.crest} />
+                            <Header as='h1' color='orange'>{info.teamName} </Header>
                         </Grid.Column>
                         <Grid.Column width={12}>
                             <Container>
-                                <p>Ο ΑΠΟΕΛ ιδρύθηκε το 1926. {loremIpsum()}</p>
+                                <p>{info.history}  {loremIpsum()}</p>
                             </Container>
                         </Grid.Column>
                     </Grid.Row>
@@ -33,7 +44,7 @@ const HomePage = () => {
                         </Grid.Column>
                         <Grid.Column width={16}>
                             <Container>
-                                <p>Ο ΑΠΟΕΛ ιδρύθηκε το 1926. {loremIpsum()}</p>
+                                <p>{info.history} {loremIpsum()}</p>
                             </Container>
                         </Grid.Column>
                     </Grid.Row>
@@ -54,4 +65,4 @@ const HomePage = () => {
 
 }
 
-export default HomePage
+export default TeamPage
