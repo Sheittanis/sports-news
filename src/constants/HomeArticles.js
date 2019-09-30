@@ -24,7 +24,6 @@ const HomeArticles = {
     ],
     articleOverview: [
         {
-            id: 1,
             imageSrc: Article1,
             section: loremIpsum(10),
             header: loremIpsum(25),
@@ -33,7 +32,6 @@ const HomeArticles = {
             url: ""
         },
         {
-            id: 2,
             imageSrc: Article2,
             section: loremIpsum(5),
             header: loremIpsum(15),
@@ -42,7 +40,6 @@ const HomeArticles = {
             url: "",
         },
         {
-            id: 3,
             imageSrc: Article3,
             section: loremIpsum(14),
             header: loremIpsum(20),

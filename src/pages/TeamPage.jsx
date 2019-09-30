@@ -13,10 +13,9 @@ import { loremIpsum, useEffectAsync } from "../utils"
 const TeamPage = (props) => {
     const [info, setInfo] = useState([]);
 // console.log(props)
-    useEffectAsync(async () => {
-        
+    useEffectAsync(async () => {        
 // console.log(props.location.team)
-// console.log(props.match.params.teamId)
+console.log(props.match.params.teamId)
         const items = await fetchTeamData(props.match.params.teamId);
         setInfo(items);
     }, [props]);

@@ -18,7 +18,7 @@ const Standings = () => {
                 <Table.Cell>{_team.losses}</Table.Cell>
                 <Table.Cell>{_team.goalsfor}</Table.Cell>
                 <Table.Cell>{_team.goalsAgainst}</Table.Cell>
-                <Table.Cell>{_team.goalDifference}</Table.Cell>
+                <Table.Cell>{_team.goalsfor - _team.goalsAgainst}</Table.Cell>
                 <Table.Cell>{_team.points}</Table.Cell>
                 <Table.Cell>{_team.form}</Table.Cell>
                 <Table.Cell>{_team.upcoming}</Table.Cell>

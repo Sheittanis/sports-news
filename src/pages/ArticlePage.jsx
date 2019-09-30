@@ -1,12 +1,10 @@
 
 import React from 'react'
-import { Grid, Image, Segment, Container, Header } from 'semantic-ui-react'
+import { Grid, Image, Header } from 'semantic-ui-react'
 import Article from "../components/Article"
 import NewsFeed from "../components/NewsFeed"
 
 import data from "../constants/HomeArticles"
-import ApoelCrest from "../images/crests/apoel.png";
-import { loremIpsum } from "../utils"
 import PreviewExample from "../images/previews/previewTemplate.jpg"
 
 const HomePage = () => {

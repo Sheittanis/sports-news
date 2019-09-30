@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Header, Grid, Segment, Icon, Image } from 'semantic-ui-react'
+import { Container, Grid} from 'semantic-ui-react'
 
 const AboutPage = () => {
 

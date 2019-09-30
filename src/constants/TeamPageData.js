@@ -12,15 +12,101 @@ import PafosCrest from "../images/crests/pafos.png";
 import ParalimniCrest from "../images/crests/paralimni.png";
 
 const ApoelData = {
-    teamName: "ΑΠΟΕΛ",
-    crest: ApoelCrest,
-    history: "Ο ΑΠΟΕΛ ιδρύθηκε το 1926.",
+  teamName: "ΑΠΟΕΛ",
+  crest: ApoelCrest,
+  history: "Ο ΑΠΟΕΛ ιδρύθηκε το 1926.",
+  amountOfArticles: 10,
+  amountOfNews: 5
 }
+
+const AekData = {
+  teamName: "ΑΕΚ",
+  crest: AekCrest,
+  history: "Ο ΑΠΟΕΛ ιδρύθηκε το 1926.",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const AelData = {
+  teamName: "ΑΕΛ",
+  crest: AelCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const AnorthosiData = {
+  teamName: "ΑΝΟΡΘΩΣΗ",
+  crest: AnorthosiCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const ApollonData = {
+  teamName: "ΑΠΟΛΛΩΝ",
+  crest: ApollonCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const DoxaData = {
+  teamName: "ΔΟΞΑ",
+  crest: DoxaCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const EthnikosData = {
+  teamName: "ΕΘΝΙΚΟΣ ΑΧΝΑΣ",
+  crest: EthnikosCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const NeaSalaminaData = {
+  teamName: "ΝΕΑ ΣΑΛΑΜΙΝΑ",
+  crest: NeaSalaminaCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const OlympiakosData = {
+  teamName: "ΟΛΥΜΠΙΑΚΟΣ",
+  crest: OlympiakosCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
+const PafosData = {
+  teamName: "ΠΑΦΟΣ FC",
+  crest: PafosCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
 const OmonoiaData = {
-    teamName: "ΟΜΟΝΟΙΑ",
-    crest: OmonoiaCrest,
-    history: "Ο ΟΜΟΝΟΙΑ ιδρύθηκε το 1926.",
+  teamName: "ΟΜΟΝΟΙΑ",
+  crest: OmonoiaCrest,
+  history: "Η ΟΜΟΝΟΙΑ ιδρύθηκε το 2018.",
+  amountOfArticles: 10,
+  amountOfNews: 5
 }
+
+const ParalimniData = {
+  teamName: "ΕΝΠ",
+  crest: ParalimniCrest,
+  history: "",
+  amountOfArticles: 10,
+  amountOfNews: 5
+}
+
 
 
 
@@ -88,21 +174,35 @@ const options = [
   },
 ];
 
-export function fetchTeamData(team){
-    switch (team) {
-        case "apoel":
-            return ApoelData;
-        case "omonoia":
-            return OmonoiaData;
-        // case "StorytellerThumb":
-        //     return StorytellerThumb;
-        // case "TanabataThumb":
-        //     return TanabataThumb;
-        // case "ConfessionThumb":
-        //     return ConfessionThumb
+export function fetchTeamData(team) {
+  switch (team) {
+    case "apoel":
+      return ApoelData;
+    case "omonoia":
+      return OmonoiaData;
+    case "aek":
+      return AekData;
+    case "ael":
+      return AelData;
+    case "anorthosi":
+      return AnorthosiData;
+    case "apollon":
+      return ApollonData;
+    case "doxa":
+      return DoxaData;
+    case "ethnikos":
+      return EthnikosData;
+    case "neasalamina":
+      return NeaSalaminaData;
+    case "pafos":
+      return PafosData;
+    case "olympiakos":
+      return OlympiakosData;
+    case "paralimni":
+      return ParalimniData;
 
-        default:
-            return " "
-    }   
+    default:
+      return " "
+  }
 }
 export default options;

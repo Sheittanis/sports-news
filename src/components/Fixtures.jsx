@@ -6,20 +6,20 @@ import data from "../constants/Fixtures"
 const Fixtures = (props) => {
 
     const fixtures = (
-        data.agonistiki.map((_agonistiki) =>
-            <Table.Body style={{ marginBottom: '1rem' }}>
+        data.agonistiki.map((_agonistiki, index) =>
+            <Table.Body key={index} style={{ marginBottom: '1rem' }}>
                 <Table.Row>
                     <Table.HeaderCell className="subHeader" colSpan='6' textAlign="center">
                         <Header  as='h2' color='red'>{_agonistiki.header}</Header>
                     </Table.HeaderCell>
                 </Table.Row>
 
-                {_agonistiki.matches.map((_match) =>
-                    <Table.Row>
+                {_agonistiki.matches.map((_match, index) =>
+                    <Table.Row key={index}>
                         <Table.Cell>
                             <Header as='h5'>
-                                <Image className="float-left" src={_match.team1} size="mini" floated ></Image> <span>{_match.teams}</span>
-                                <Image className="float-right" src={_match.team2} size="mini" floated></Image>
+                                <Image className="float-left" src={_match.team1} size="mini" ></Image> <span>{_match.teams}</span>
+                                <Image className="float-right" src={_match.team2} size="mini" ></Image>
                             </Header>
                         </Table.Cell>
                         <Table.Cell>{_match.date}</Table.Cell>

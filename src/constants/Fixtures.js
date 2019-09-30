@@ -15,11 +15,9 @@ import ParalimniCrest from "../images/crests/paralimni.png";
 const Fixtures = {
     agonistiki: [
         {
-            id: 1,
             header: "1η αγωνιστική",
             matches: [
                 {
-                    id: 1,
                     teams: "Νέα Σαλαμίνα - ΠΑΦΟΣ FC",
                     team1: NeaSalaminaCrest,
                     team2: PafosCrest,
@@ -30,7 +28,6 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 2,
                     teams: "Δόξα - Ομόνοια",
                     team1: DoxaCrest,
                     team2: OmonoiaCrest,
@@ -41,8 +38,7 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 3,
-                    teams: "ΑΕΛ - Ανόρθωση",                    
+                    teams: "ΑΕΛ - Ανόρθωση",
                     team1: AelCrest,
                     team2: AnorthosiCrest,
                     date: "Κυριακή 25/08/2019",
@@ -52,7 +48,6 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 4,
                     teams: "ΕΝΠ - Εθνικός Άχνας",
                     team1: ParalimniCrest,
                     team2: EthnikosCrest,
@@ -63,8 +58,7 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 5,
-                    teams: "ΑΕΚ - Απόλλωνας",                    
+                    teams: "ΑΕΚ - Απόλλωνας",
                     team1: AekCrest,
                     team2: ApollonCrest,
                     date: "Παρασκευή 27/09/2019",
@@ -74,7 +68,6 @@ const Fixtures = {
                     article: " "
                 },
                 {
-                    id: 6,
                     teams: "ΑΠΟΕΛ - Ολυμπιακός",
                     team1: ApoelCrest,
                     team2: OlympiakosCrest,
@@ -87,11 +80,9 @@ const Fixtures = {
             ]
         },
         {
-            id: 2,
             header: "2η αγωνιστική",
             matches: [
                 {
-                    id: 1,
                     teams: "ΠΑΦΟΣ FC - AEK",
                     team1: PafosCrest,
                     team2: AekCrest,
@@ -102,7 +93,6 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 2,
                     teams: "Ομόνοια - Νέα Σαλαμίνα",
                     team1: OmonoiaCrest,
                     team2: NeaSalaminaCrest,
@@ -113,8 +103,7 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 3,
-                    teams: "ΑΕΛ - ΕΝΠ ",                    
+                    teams: "ΑΕΛ - ΕΝΠ ",
                     team1: AelCrest,
                     team2: ParalimniCrest,
                     date: "Σάββατο 31/08/2019",
@@ -124,7 +113,6 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 4,
                     teams: "Ολυμπιακός - Δόξα",
                     team1: OlympiakosCrest,
                     team2: DoxaCrest,
@@ -135,8 +123,7 @@ const Fixtures = {
                     article: "Άρθρο Αγώνα"
                 },
                 {
-                    id: 5,
-                    teams: "Εθνικός Άχνας - ΑΠΟΕΛ",                    
+                    teams: "Εθνικός Άχνας - ΑΠΟΕΛ",
                     team1: EthnikosCrest,
                     team2: ApoelCrest,
                     date: "Τετάρτη 15/01/2020",
@@ -146,7 +133,6 @@ const Fixtures = {
                     article: " "
                 },
                 {
-                    id: 6,
                     teams: "Ανόρθωση - Απόλλωνας",
                     team1: AnorthosiCrest,
                     team2: ApollonCrest,
