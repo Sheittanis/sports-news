@@ -13,13 +13,16 @@ const HomeArticles = {
     },
     latestNewsData: [
         {
-            imageSrc: Article1
+            imageSrc: Article1,
+            description: loremIpsum(57)
         },
         {
-            imageSrc: Article2
+            imageSrc: Article2,
+            description: loremIpsum(41)
         },
         {
-            imageSrc: Article3
+            imageSrc: Article3,
+            description: loremIpsum(60)
         },
     ],
     articleOverview: [

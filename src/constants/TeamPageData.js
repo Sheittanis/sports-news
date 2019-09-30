@@ -22,7 +22,7 @@ const ApoelData = {
 const AekData = {
   teamName: "ΑΕΚ",
   crest: AekCrest,
-  history: "Ο ΑΠΟΕΛ ιδρύθηκε το 1926.",
+  history: "",
   amountOfArticles: 10,
   amountOfNews: 5
 }

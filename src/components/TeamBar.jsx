@@ -9,7 +9,7 @@ const TeamBarOption= (props) => {
     const {option} = props;
     var dimensions = windowDimensions();
 
-    const dynamicWidth = dimensions.width * 0.06;
+    const dynamicWidth = dimensions.width * 0.05;
     // const dynamicHeight = dimensions.width * 0.35;
     const newTo = {
         pathname: "/team" + option.path,
@@ -17,7 +17,7 @@ const TeamBarOption= (props) => {
     };
     return (
         <Segment inverted vertical className="teamBar">
-            <Image className="teamOption margin-1" key={option.id} as={Link} to={newTo} //'/team' + option.path + '/:id' 
+            <Image className="teamOption" key={option.id} as={Link} to={newTo} //'/team' + option.path + '/:id' 
             src={option.imageSrc} style={{ width: dynamicWidth }}/>
         </Segment>
     )
