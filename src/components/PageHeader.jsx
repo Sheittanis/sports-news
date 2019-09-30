@@ -4,6 +4,7 @@ import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility, Grid, 
 
 import {getCurrentDate} from "../utils"
 import { NavLink } from "react-router-dom";
+import SearchBar from "../components/SearchBar"
 
 const dateNow = getCurrentDate();
 
@@ -54,7 +55,7 @@ class DesktopContainer extends Component {
                 <Header as='h1' style={{display: 'inline'}}><Icon name='soccer'></Icon> MONO MAPPES <Icon name='soccer'></Icon> </Header>
               </Grid.Column>
               <Grid.Column>
-                <Icon name='search'></Icon>
+                <SearchBar></SearchBar>
               </Grid.Column>
             </Grid.Row>
             <Grid.Row className="headerMenu">

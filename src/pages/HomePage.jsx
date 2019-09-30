@@ -4,7 +4,7 @@ import { Grid, Image, Header, Popup, Segment } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
-import data from "../constants/HomeArticles"
+import {latestArticles, breakingArticle, articleOverview} from "../constants/Articles"
 import LiveScores from '../components/LiveScores'
 import TeamBar from "../components/SponsorsBar";
 
@@ -15,9 +15,9 @@ const HomePage = () => {
   let timer = null;
 
   const latestNews = (
-    data.latestNewsData.map((_project, index) =>
-      <Grid.Column className="marginTop-1" key={index} computer={Math.floor(16 / data.latestNewsData.length)} >
-        <Image src={_project.imageSrc}></Image>
+    latestArticles.map((_project, index) =>
+      <Grid.Column className="marginTop-1" key={index} computer={Math.floor(16 / latestArticles.length)} >
+        <Image src={_project.imagesrc}></Image>
         <p >{_project.description}</p>
       </Grid.Column>
     )
@@ -44,15 +44,15 @@ const HomePage = () => {
           <Popup on='click' open={isOpen} onClose={handleClose} onOpen={handleOpen} position='top right' hideOnScroll //change to mousehover and icon?
             trigger={
               <Segment style={{height: '90%'}}>
-                <Image src={data.breakingArticle.imageSrc}></Image>
-                <Header as='h2' color="orange">{data.breakingArticle.header}</Header>
-                <p>{data.breakingArticle.description}</p>
+                <Image src={breakingArticle.imagesrc}></Image>
+                <Header as='h2' color="orange">{breakingArticle.header}</Header>
+                <p>{breakingArticle.description}</p>
               </Segment>
             }>
 
             <Popup.Header>Peek</Popup.Header>
             <Popup.Content>
-              <p>{data.breakingArticle.peek}</p>
+              <p>{breakingArticle.peek}</p>
             </Popup.Content>
           </Popup>
         </Grid.Column>
@@ -68,17 +68,17 @@ const HomePage = () => {
 
       <TeamBar></TeamBar>
       <Header as='h2' color="orange">LATEST NEWS</Header>
-      <Grid.Row columns={data.latestNewsData.length}>
+      <Grid.Row columns={latestArticles.length}>
         {latestNews}
       </Grid.Row>
 
 
       <Grid.Row columns={2} style={{marginTop: '5rem'}} >
         <Grid.Column width={10}>
-          <ArticleOverview articles={data.articleOverview}></ArticleOverview>
+          <ArticleOverview articles={articleOverview}></ArticleOverview>
         </Grid.Column>
         <Grid.Column width={6}>
-          <NewsFeed feed={data.articleOverview}></NewsFeed>
+          <NewsFeed feed={articleOverview}></NewsFeed>
         </Grid.Column>
       </Grid.Row>
     </Grid>

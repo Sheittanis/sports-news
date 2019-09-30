@@ -1,8 +1,21 @@
 import _ from 'lodash'
 import React from 'react'
-import { Header, Segment, Table, Image } from 'semantic-ui-react'
+import { Header, Segment, Table, Image, Icon } from 'semantic-ui-react'
 
 import data from "../constants/Standings"
+
+function getResult(result){
+    switch (result) {
+        case "W":
+            return <Icon name='circle' color='green' size='large'></Icon>;
+        case "L":
+            return <Icon name='circle' color='red' size='large'></Icon>;
+        case "D":
+            return  <Icon name='circle' color='blue' size='large'></Icon>;
+        default:
+            return " "
+    }
+}
 
 const Standings = () => {
 
@@ -20,7 +33,12 @@ const Standings = () => {
                 <Table.Cell>{_team.goalsAgainst}</Table.Cell>
                 <Table.Cell>{_team.goalsfor - _team.goalsAgainst}</Table.Cell>
                 <Table.Cell>{_team.points}</Table.Cell>
-                <Table.Cell>{_team.form}</Table.Cell>
+                <Table.Cell>                
+                    {_team.form.map((_form, index) =>
+                        <span key={index}> {getResult(_form)}</span>
+                )}
+                {/* {_team.form} */}
+                </Table.Cell>
                 <Table.Cell>{_team.upcoming}</Table.Cell>
             </Table.Row>
         )

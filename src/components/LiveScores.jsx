@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Segment, Grid, Image, Icon } from 'semantic-ui-react'
+import { Segment, Grid, Image } from 'semantic-ui-react'
 
 import data from "../constants/LiveMatches"
 
@@ -7,10 +7,9 @@ const LiveScores = (props) => {
 
     const liveScores = (
         <Grid>
-
             {data.map((_match, index) =>
 
-                <Grid.Row columns={3}>
+                <Grid.Row key={index} columns={3}>
                     <Grid.Column width={3}>
                         <Image className="float-left" src={_match.team1} size="mini" ></Image>
                     </Grid.Column>
