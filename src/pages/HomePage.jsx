@@ -6,6 +6,7 @@ import NewsFeed from "../components/NewsFeed"
 
 import data from "../constants/HomeArticles"
 import LiveScores from '../components/LiveScores'
+import TeamBar from "../components/SponsorsBar";
 
 const timeoutLength = 2500
 
@@ -65,6 +66,7 @@ const HomePage = () => {
         </Grid.Column>
       </Grid.Row>
 
+      <TeamBar></TeamBar>
       <Header as='h2' color="orange">LATEST NEWS</Header>
       <Grid.Row columns={data.latestNewsData.length}>
         {latestNews}
