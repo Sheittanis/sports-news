@@ -7,7 +7,7 @@ import NewsFeed from "../components/NewsFeed"
 import data from "../constants/HomeArticles"
 import PreviewExample from "../images/previews/previewTemplate.jpg"
 
-const HomePage = () => {
+const ArticlePage = () => {
 
     return (
         <Grid centered >
@@ -27,4 +27,4 @@ const HomePage = () => {
 
 }
 
-export default HomePage
+export default ArticlePage

@@ -1,16 +1,18 @@
 import React from 'react'
 import { Header, Segment, Feed } from 'semantic-ui-react'
+import { loremIpsum } from "../utils"
 
 const NewsFeed = (props) => {
-
 
     const articles = (
         props.feed.map((option, index) =>
             <Segment key={index} style={{ margin: '1rem' }}>
                 <Feed.Event>
-                    <Feed.Label >{option.date} - {option.header}</Feed.Label>
+                    <Feed.Label>Today - {loremIpsum(Math.floor((Math.random() * 10) + 10))}</Feed.Label>
                     <Feed.Content>
-                        <Feed.Summary as='a'>{option.header}</Feed.Summary>
+                        <Feed.Summary as='a'>
+                            {loremIpsum(Math.floor((Math.random() * 50) + 10))}
+                            </Feed.Summary>
                     </Feed.Content>
                 </Feed.Event>
             </Segment>
@@ -19,7 +21,7 @@ const NewsFeed = (props) => {
 
     return (
         <Segment inverted vertical>
-        <Header as='h2' color='red'>News Feed</Header>
+            <Header as='h2' color='red'>News Feed</Header>
             {articles}
         </Segment>
     )

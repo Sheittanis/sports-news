@@ -1,9 +1,7 @@
 import React from 'react'
 import { Header, Segment, Container } from 'semantic-ui-react'
 
-const NewsFeed = (props) => {
-
-
+const Article = (props) => {
 
     return (
         <Segment vertical>
@@ -17,4 +15,4 @@ const NewsFeed = (props) => {
     )
 }
 
-export default NewsFeed
+export default Article

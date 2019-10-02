@@ -4,3 +4,11 @@
 .ui.header.pageTitle{
     width: 100%;
 }
+
+.ui.header.teamBannerHeader{
+    width: 100%;
+    text-align: center;
+    font-size: 1vw;
+    // font-size: calc(12px + 1vmin);
+    word-wrap: break-word;
+}
