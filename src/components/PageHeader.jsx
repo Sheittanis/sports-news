@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility, Grid, Header } from 'semantic-ui-react'
+import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility, Grid, Header, Image } from 'semantic-ui-react'
 
 import {getCurrentDate} from "../utils"
 import { NavLink } from "react-router-dom";
 import SearchBar from "../components/SearchBar"
+import BallImage from "../images/ball.png"
 
 const dateNow = getCurrentDate();
 
@@ -52,7 +53,7 @@ class DesktopContainer extends Component {
                 <Icon name='sidebar' onClick={this.handleToggle}></Icon>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h1' style={{display: 'inline'}}><Icon name='soccer'></Icon> MONO MAPPES <Icon name='soccer'></Icon> </Header>
+                <Header as='h1' style={{display: 'inline'}}><Image src={BallImage} size="small"></Image>  MONO MAPPES <Image src={BallImage} size="small"></Image>  </Header>
               </Grid.Column>
               <Grid.Column>
                 <SearchBar></SearchBar>

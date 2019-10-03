@@ -25,8 +25,7 @@ const ArticleOverview = (props) => {
     );
 
     return (
-        <Segment inverted vertical>
-            <Header as='h2' color='red'>Article Overview</Header>
+        <Segment vertical>
             <Container>
                 <Grid centered>
                     <Grid.Row >

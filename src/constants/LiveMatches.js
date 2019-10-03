@@ -19,7 +19,7 @@ const LiveMatches = [
         team2: PafosCrest,
         team1goals: 1,
         team2goals: 2,
-        minute: "FT"
+        status: "FT"
     },
     {
         teams: "Δόξα - Ομόνοια",
@@ -27,7 +27,7 @@ const LiveMatches = [
         team2: OmonoiaCrest,
         team1goals: 0,
         team2goals: 2,
-        minute: "FT"
+        status: "80' - LIVE"
     },
     {
         teams: "ΑΕΛ - Ανόρθωση",
@@ -35,7 +35,7 @@ const LiveMatches = [
         team2: AnorthosiCrest,
         team1goals: 0,
         team2goals: 0,
-        minute: "FT"
+        status: "20:00"
     },
     {
         teams: "ΕΝΠ - Εθνικός Άχνας",
@@ -43,7 +43,7 @@ const LiveMatches = [
         team2: EthnikosCrest,
         team1goals: 3,
         team2goals: 4,
-        minute: "FT"
+        status: "FT"
     },
     {
         teams: "ΑΕΚ - Απόλλωνας",
@@ -51,7 +51,7 @@ const LiveMatches = [
         team2: ApollonCrest,
         team1goals: 0,
         team2goals: 0,
-        minute: "0'"
+        status: "0'"
     },
     {
         teams: "ΑΠΟΕΛ - Ολυμπιακός",
@@ -59,7 +59,7 @@ const LiveMatches = [
         team2: OlympiakosCrest,
         team1goals: 0,
         team2goals: 0,
-        minute: "33'"
+        status: "33' - LIVE"
     }
 ]
 

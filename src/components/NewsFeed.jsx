@@ -20,8 +20,8 @@ const NewsFeed = (props) => {
     );
 
     return (
-        <Segment inverted vertical>
-            <Header as='h2' color='red'>News Feed</Header>
+        <Segment vertical>
+            <Header as='h2' color='orange'>News Feed</Header>
             {articles}
         </Segment>
     )

@@ -1,18 +1,22 @@
 
-import React, {useState} from 'react'
-import { Grid, Image, Header, Popup, Segment } from 'semantic-ui-react'
+import React from 'react'
+import { Grid, Image, Header, Segment } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
-import {latestArticles, breakingArticle, articleOverview} from "../constants/Articles"
+import {latestArticles, articleOverview} from "../constants/Articles"
 import LiveScores from '../components/LiveScores'
 import TeamBar from "../components/SponsorsBar";
+import BreakingNews from '../components/BreakingNews'
 
-const timeoutLength = 2500
+import windowDimensions from "../actions/WindowDimensions"
+import {Link} from "react-router-dom"
 
 const HomePage = () => {
-  const [isOpen, setOpen] = useState(false);
-  let timer = null;
+
+  var dimensions = windowDimensions();
+  
+  const isMobile = dimensions.width < 768;
 
   const latestNews = (
     latestArticles.map((_project, index) =>
@@ -23,45 +27,26 @@ const HomePage = () => {
     )
   );
   
-  const handleOpen = () => {
-    setOpen(true);
-
-    timer = setTimeout(() => {
-      setOpen(false)
-    }, timeoutLength)
-  }
-
-  const handleClose = () => {
-    setOpen(false);
-    clearTimeout(timer)
-  }
 
   return (
     <Grid centered >
       <Grid.Row columns={2}>
-        <Grid.Column width={10}>
-          <Header as='h2' color="orange">BREAKING NEWS</Header>
-          <Popup on='click' open={isOpen} onClose={handleClose} onOpen={handleOpen} position='top right' hideOnScroll //change to mousehover and icon?
-            trigger={
-              <Segment style={{height: '90%'}}>
-                <Image src={breakingArticle.imagesrc}></Image>
-                <Header as='h2' color="orange">{breakingArticle.header}</Header>
-                <p>{breakingArticle.description}</p>
-              </Segment>
-            }>
-
-            <Popup.Header>Peek</Popup.Header>
-            <Popup.Content>
-              <p>{breakingArticle.peek}</p>
-            </Popup.Content>
-          </Popup>
+        <Grid.Column computer={10} tablet={16}>
+          <BreakingNews></BreakingNews>
         </Grid.Column>
 
 
-        <Grid.Column width={6}>
-          <Header as='h2' color="orange">LIVE SCORES</Header>
+        <Grid.Column computer={6} tablet={16}>
           <Segment>
-            <LiveScores></LiveScores>
+            {!isMobile ? (
+              <LiveScores></LiveScores>
+            ) : (
+                <Segment className="upcoming">
+                  <Segment.Inline as={Link} to="/livescores">
+                    <Header as='h4' color="orange" textAlign="center" className="underline" >View Live Scores</Header>
+                  </Segment.Inline>
+                </Segment>
+              )}
           </Segment>
         </Grid.Column>
       </Grid.Row>

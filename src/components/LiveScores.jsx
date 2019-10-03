@@ -1,35 +1,50 @@
 import React from 'react'
-import { Segment, Grid, Image } from 'semantic-ui-react'
+import { Segment, Image, Table, Header, Item } from 'semantic-ui-react'
 
 import data from "../constants/LiveMatches"
+import { Link } from "react-router-dom"
 
-const LiveScores = (props) => {
+const LiveScores = () => {
 
     const liveScores = (
-        <Grid>
-            {data.map((_match, index) =>
-
-                <Grid.Row key={index} columns={3}>
-                    <Grid.Column width={3}>
-                        <Image className="float-left" src={_match.team1} size="mini" ></Image>
-                    </Grid.Column>
-                    <Grid.Column textAlign="center" width={10}>
-                        <div className="float-left" style={{ background: 'red', height: '30px', width: '30px' }}>{_match.team1goals}</div>
-                        <span>{_match.teams}    </span>
-                        <div className="float-right" style={{ background: 'red', height: '30px', width: '30px' }}>{_match.team2goals}</div>
-
-                    </Grid.Column>
-                    <Grid.Column width={3}>
-                        <Image className="float-left" src={_match.team2} size="mini" ></Image>
-                    </Grid.Column>
-                </Grid.Row>
-            )}
-        </Grid>
+        data.map((_match, index) =>
+            <Table.Row key={index}>
+                <Table.Cell>
+                    <Image className="float-left" src={_match.team1} size="mini" ></Image>
+                    {_match.team1goals}
+                </Table.Cell>
+                <Table.Cell>
+                    <div>
+                        {_match.teams}
+                    </div>
+                    <div ><Item as={Link} to="/home">
+                        {_match.status}</Item>
+                    </div>
+                </Table.Cell>
+                <Table.Cell>
+                    {_match.team2goals}
+                    <Image className="float-right" src={_match.team2} size="mini" ></Image>
+                </Table.Cell>
+            </Table.Row>
+        )
     );
 
     return (
         <Segment vertical>
-            {liveScores}
+            <Header as='h2' color="orange">LIVE SCORES</Header>
+            <Table striped celled textAlign="center">
+                <Table.Header className="standingsTable">
+                    <Table.Row>
+                        <Table.HeaderCell>Team 1</Table.HeaderCell>
+                        <Table.HeaderCell>Score</Table.HeaderCell>
+                        <Table.HeaderCell>Team 2</Table.HeaderCell>
+                    </Table.Row>
+                </Table.Header>
+
+                <Table.Body>
+                    {liveScores}
+                </Table.Body>
+            </Table>
         </Segment>
     )
 }
