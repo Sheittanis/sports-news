@@ -1,14 +1,19 @@
 import React from 'react'
 import { Segment, Image, Table, Header, Item } from 'semantic-ui-react'
 
-import data from "../constants/LiveMatches"
+import {liveMatches} from "../constants/LiveMatches"
 import { Link } from "react-router-dom"
 
-const LiveScores = () => {
+const LiveScores = (props) => {
+    const { selectedMatch } = props
+
+    function matchSelected(match) {
+        selectedMatch(match)        
+    }
 
     const liveScores = (
-        data.map((_match, index) =>
-            <Table.Row key={index}>
+        liveMatches.map((_match, index) =>
+            <Table.Row key={_match.matchId} onClick={() => matchSelected(_match)}>
                 <Table.Cell>
                     <Image className="float-left" src={_match.team1} size="mini" ></Image>
                     {_match.team1goals}

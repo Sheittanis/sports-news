@@ -12,8 +12,9 @@ import PafosCrest from "../images/crests/pafos.png";
 import ParalimniCrest from "../images/crests/paralimni.png";
 
 
-const LiveMatches = [
+export const liveMatches = [
     {
+        matchId: 1,
         teams: "Νέα Σαλαμίνα - ΠΑΦΟΣ FC",
         team1: NeaSalaminaCrest,
         team2: PafosCrest,
@@ -22,6 +23,7 @@ const LiveMatches = [
         status: "FT"
     },
     {
+        matchId: 2,
         teams: "Δόξα - Ομόνοια",
         team1: DoxaCrest,
         team2: OmonoiaCrest,
@@ -30,6 +32,7 @@ const LiveMatches = [
         status: "80' - LIVE"
     },
     {
+        matchId: 3,
         teams: "ΑΕΛ - Ανόρθωση",
         team1: AelCrest,
         team2: AnorthosiCrest,
@@ -38,6 +41,7 @@ const LiveMatches = [
         status: "20:00"
     },
     {
+        matchId: 4,
         teams: "ΕΝΠ - Εθνικός Άχνας",
         team1: ParalimniCrest,
         team2: EthnikosCrest,
@@ -46,6 +50,7 @@ const LiveMatches = [
         status: "FT"
     },
     {
+        matchId: 5,
         teams: "ΑΕΚ - Απόλλωνας",
         team1: AekCrest,
         team2: ApollonCrest,
@@ -54,6 +59,7 @@ const LiveMatches = [
         status: "0'"
     },
     {
+        matchId: 6,
         teams: "ΑΠΟΕΛ - Ολυμπιακός",
         team1: ApoelCrest,
         team2: OlympiakosCrest,
@@ -64,4 +70,59 @@ const LiveMatches = [
 ]
 
 
-export default LiveMatches;
+export const liveFeed = [
+    {
+        matchId: 1,
+        teams: "Νέα Σαλαμίνα - ΠΑΦΟΣ FC",
+        team1: NeaSalaminaCrest,
+        team2: PafosCrest,
+        team1goals: 1,
+        team2goals: 2,
+        status: "FT"
+    },
+    {
+        matchId: 2,
+        teams: "Δόξα - Ομόνοια",
+        team1: DoxaCrest,
+        team2: OmonoiaCrest,
+        team1goals: 0,
+        team2goals: 2,
+        status: "80' - LIVE"
+    },
+    {
+        matchId: 3,
+        teams: "ΑΕΛ - Ανόρθωση",
+        team1: AelCrest,
+        team2: AnorthosiCrest,
+        team1goals: 0,
+        team2goals: 0,
+        status: "20:00"
+    },
+    {
+        matchId: 4,
+        teams: "ΕΝΠ - Εθνικός Άχνας",
+        team1: ParalimniCrest,
+        team2: EthnikosCrest,
+        team1goals: 3,
+        team2goals: 4,
+        status: "FT"
+    },
+    {
+        matchId: 5,
+        teams: "ΑΕΚ - Απόλλωνας",
+        team1: AekCrest,
+        team2: ApollonCrest,
+        team1goals: 0,
+        team2goals: 0,
+        status: "0'"
+    },
+    {
+        matchId: 6,
+        teams: "ΑΠΟΕΛ - Ολυμπιακός",
+        team1: ApoelCrest,
+        team2: OlympiakosCrest,
+        team1goals: 0,
+        team2goals: 0,
+        status: "33' - LIVE"
+    }
+]
