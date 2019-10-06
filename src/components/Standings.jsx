@@ -1,17 +1,17 @@
 import _ from 'lodash'
 import React from 'react'
-import { Header, Segment, Table, Image, Icon } from 'semantic-ui-react'
+import { Responsive, Header, Segment, Table, Image, Icon } from 'semantic-ui-react'
 
 import data from "../constants/Standings"
 
-function getResult(result){
+function getResult(result) {
     switch (result) {
         case "W":
             return <Icon name='circle' color='green' size='large'></Icon>;
         case "L":
             return <Icon name='circle' color='red' size='large'></Icon>;
         case "D":
-            return  <Icon name='circle' color='blue' size='large'></Icon>;
+            return <Icon name='circle' color='blue' size='large'></Icon>;
         default:
             return " "
     }
@@ -23,46 +23,73 @@ const Standings = () => {
     const fixtures = (
         newArr.map((_team, index) =>
             <Table.Row key={index}>
-                <Table.Cell>{index + 1}</Table.Cell>
-                <Table.Cell><Image src={_team.imageSrc} verticalAlign="middle" size="mini"></Image><div>{_team.name} </div></Table.Cell>
-                <Table.Cell>{_team.matches}</Table.Cell>
+                <Responsive as={Table.Cell} minWidth={800}>{index + 1}</Responsive>
+                <Table.Cell textAlign="left">
+                    <Responsive as={Image} minWidth={1200}>
+                        <Image src={_team.imageSrc} className="marginR-1" verticalAlign="middle" size="mini"></Image>
+                    </Responsive>
+                    <Responsive as={Image} minWidth={500}>
+                        <div>{_team.name}</div>
+                    </Responsive>
+                    <Responsive as={Image} maxWidth={499}>
+                        <Image src={_team.imageSrc} verticalAlign="middle" size="mini"></Image>
+                    </Responsive>
+                </Table.Cell>
+                <Responsive as={Table.Cell} minWidth={600}>{_team.matches}</Responsive>
+
                 <Table.Cell>{_team.wins}</Table.Cell>
                 <Table.Cell>{_team.draws}</Table.Cell>
                 <Table.Cell>{_team.losses}</Table.Cell>
-                <Table.Cell>{_team.goalsfor}</Table.Cell>
-                <Table.Cell>{_team.goalsAgainst}</Table.Cell>
-                <Table.Cell>{_team.goalsfor - _team.goalsAgainst}</Table.Cell>
+
+                <Responsive as={Table.Cell} minWidth={520}>
+                    {_team.goalsfor}
+                </Responsive>
+                <Responsive as={Table.Cell} minWidth={520}>
+                    {_team.goalsAgainst}
+                </Responsive>
+
+                <Responsive as={Table.Cell} minWidth={420}>{_team.goalsfor - _team.goalsAgainst}</Responsive>
                 <Table.Cell>{_team.points}</Table.Cell>
-                <Table.Cell>                
+                <Responsive as={Table.Cell} minWidth={1200}>
                     {_team.form.map((_form, index) =>
                         <span key={index}> {getResult(_form)}</span>
-                )}
-                {/* {_team.form} */}
-                </Table.Cell>
-                <Table.Cell>{_team.upcoming}</Table.Cell>
+                    )}
+                </Responsive>
+                <Responsive as={Table.Cell} minWidth={1200}>
+                    {_team.upcoming}
+                </Responsive>
             </Table.Row>
         )
     );
     //gradient hover
 
     return (
-        <Segment vertical>
+        <Segment vertical style={{ width: '100%' }}>
             <Header as='h2' color='red'>Βαθμολογία</Header>
-            <Table striped celled textAlign="center">
+            <Table unstackable striped celled textAlign="center">
                 <Table.Header className="standingsTable">
                     <Table.Row>
-                        <Table.HeaderCell>Position</Table.HeaderCell>
+                        <Responsive as={Table.HeaderCell} minWidth={800}>
+                            Position
+                        </Responsive>
                         <Table.HeaderCell>Team</Table.HeaderCell>
-                        <Table.HeaderCell>Played</Table.HeaderCell>
+                        <Responsive as={Table.HeaderCell} minWidth={600}>
+                            Played
+                        </Responsive>
                         <Table.HeaderCell>Won</Table.HeaderCell>
                         <Table.HeaderCell>Drawn</Table.HeaderCell>
                         <Table.HeaderCell>Lost</Table.HeaderCell>
-                        <Table.HeaderCell>Goals For</Table.HeaderCell>
-                        <Table.HeaderCell>Goals Against</Table.HeaderCell>
-                        <Table.HeaderCell>Goal Difference</Table.HeaderCell>
+                        <Responsive as={Table.HeaderCell} minWidth={520}>GF</Responsive>
+                        <Responsive as={Table.HeaderCell} minWidth={520}>GA</Responsive>
+                        <Responsive as={Table.HeaderCell} minWidth={420}>GD</Responsive>
                         <Table.HeaderCell>Points</Table.HeaderCell>
-                        <Table.HeaderCell>Form</Table.HeaderCell>
-                        <Table.HeaderCell>Upcoming</Table.HeaderCell>
+
+                        <Responsive as={Table.HeaderCell} minWidth={1200}>
+                            Form
+                        </Responsive>
+                        <Responsive as={Table.HeaderCell} minWidth={1200}>
+                            Upcoming
+                        </Responsive>
                     </Table.Row>
                 </Table.Header>
 

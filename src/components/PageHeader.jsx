@@ -65,6 +65,7 @@ class DesktopContainer extends Component {
                   <Menu.Item as={NavLink} to="/home" ><Icon name='home'></Icon></Menu.Item>
                   <Menu.Item as={NavLink} to="/fixtures" >Fixtures</Menu.Item>
                   <Menu.Item as={NavLink} to="/standings" >Standings</Menu.Item>
+                  <Menu.Item as={NavLink} to="/stats" >Stats</Menu.Item>
                 </Container>
               </Menu>
             </Grid.Row>
@@ -94,7 +95,10 @@ class MobileContainer extends Component {
     return (
       <Responsive as={Sidebar.Pushable} getWidth={getWidth} maxWidth={Responsive.onlyMobile.maxWidth}>
         <Sidebar as={Menu} animation='push' inverted onHide={this.handleSidebarHide} vertical visible={sidebarOpened} style={{ minWidth: '100vw' }}>
-          <Menu.Item as={NavLink} to="/home" onClick={() => this.navigate("Home")} >Home <Icon name='home' size='large' color='teal'></Icon></Menu.Item>
+          <Menu.Item as={NavLink} to="/home" onClick={() => this.navigate("Home")} >Home</Menu.Item>
+          <Menu.Item as={NavLink} to="/fixtures" onClick={() => this.navigate("Fixtures")} >Fixtures</Menu.Item>
+          <Menu.Item as={NavLink} to="/standings" onClick={() => this.navigate("Standings")} >Standings</Menu.Item>
+          <Menu.Item as={NavLink} to="/stats" onClick={() => this.navigate("Stats")} >Stats</Menu.Item>
         </Sidebar>
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment inverted textAlign='center' style={{ minWidth: '100vw', padding: '1em 0em', height: heightExpanded }} vertical>
