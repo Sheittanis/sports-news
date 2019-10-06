@@ -13,7 +13,6 @@ const LiveScoresPage = (props) => {
     useEffect(() => {
         if (props.location.state !== undefined) {
             const matchFound = findMatchFeed(props.location.state.matchId);
-            console.log(props.location.state.matchId)
             if (matchFound !== null && matchFound !== undefined)
                 setFeed(matchFound);
         }

@@ -5,15 +5,16 @@ import Article from "../components/Article"
 import NewsFeed from "../components/NewsFeed"
 
 import data from "../constants/HomeArticles"
-import PreviewExample from "../images/previews/previewTemplate.jpg"
+import PreviewExample from "../images/previews/previewExample.png"
 
+import { loremIpsum } from "../utils"
 const ArticlePage = () => {
 
     return (
         <Grid centered >
             <Grid.Row columns={2}>
                 <Grid.Column width={12}>
-                    <Header as='h2' color='red'>Οι πορτοκαλί τιμούν τον Νούνο Μοράις</Header>
+                    <Header as='h2' color='red'>{loremIpsum(Math.floor((Math.random() * 100) + 10))}</Header>
                     <Image src={PreviewExample} size="massive" />
                     <Article></Article>
                 </Grid.Column>

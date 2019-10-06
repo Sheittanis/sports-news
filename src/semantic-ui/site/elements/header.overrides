@@ -12,3 +12,10 @@
     // font-size: calc(12px + 1vmin);
     word-wrap: break-word;
 }
+.ui.header.articleHeader{
+    color: #ffa914;
+}
+.ui.header.articleHeader:hover{
+    color: #1e70bf !important;
+    
+}

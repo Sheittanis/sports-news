@@ -3,8 +3,7 @@ import { Header, Segment, Feed, Icon, Image } from 'semantic-ui-react'
 
 const LiveScoreFeed = (props) => {
     const { selectedFeed } = props
-    console.log(selectedFeed)
-
+    
     const matchFeed = (
         selectedFeed.feed !== undefined && selectedFeed.feed.map((_item, index) =>
             <Feed.Event key={index} >

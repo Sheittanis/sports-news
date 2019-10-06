@@ -7,14 +7,8 @@ import PlayerStatCard from '../components/PlayerStatCard'
 import TeamStatCard from '../components/TeamStatCard'
 
 const StatsPage = () => {
-    // const data = fetchTeamData();
     const [mode, setMode] = useState("playerStats");
     const [stats, setStats] = useState(playerStats);
-
-    // useEffect(() => {
-
-    // }, [mode]);
-
     const selectedMode = (e, { value }) => {
         // e.persist();
         setMode(value)
@@ -22,17 +16,11 @@ const StatsPage = () => {
     };
 
     const selectedStats = (
-        // teamStats.map((option, index) => <PlayerStatCard key={index} option={option}></PlayerStatCard>)
         stats.map((option, index) => {
-            // return mode === "playerStats" ?
-            // <PlayerStatCard key={index} option={option}></PlayerStatCard>
-            // :
-            // <TeamStatCard key={index} option={option}></TeamStatCard>
             switch (mode) {
                 case "playerStats":
                   return <PlayerStatCard key={index} option={option}></PlayerStatCard>;
                 case "teamStats":
-                        console.log(stats)
                   return <TeamStatCard key={index} option={option}></TeamStatCard>;
                 default:
                   return " "
@@ -42,7 +30,6 @@ const StatsPage = () => {
 
 
     function setModeData(mode) {
-        console.log(mode)
         switch (mode) {
           case "playerStats":
             return setStats(playerStats);

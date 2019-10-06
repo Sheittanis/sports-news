@@ -1,6 +1,6 @@
 import React from 'react'
 import { Segment, Container, Grid, Header, Image } from 'semantic-ui-react'
-import PreviewExample from "../images/previews/previewTemplate.jpg"
+import PreviewExample from "../images/previews/previewExample.png"
 
 const ArticleOverview = (props) => {
 

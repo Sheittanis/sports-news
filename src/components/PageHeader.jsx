@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import React, { Component } from 'react'
 import { Container, Icon, Menu, Responsive, Segment, Sidebar, Visibility, Grid, Header, Image } from 'semantic-ui-react'
 
-import {getCurrentDate} from "../utils"
+import { getCurrentDate } from "../utils"
 import { NavLink } from "react-router-dom";
 import SearchBar from "../components/SearchBar"
 import BallImage from "../images/ball.png"
@@ -27,33 +27,26 @@ HomepageHeading.propTypes = {
 }
 
 class DesktopContainer extends Component {
-    state = { open: false }
+  state = { open: false }
   open = () => this.setState({ open: true })
   close = () => this.setState({ open: false })
 
   hideFixedMenu = () => this.setState({ fixed: false })
   showFixedMenu = () => this.setState({ fixed: true })
-  handleSidebarHide = () => this.setState({ sidebarOpened: false })
-  handleToggle = () => this.setState({ sidebarOpened: true })
 
   render() {
-    // const { children } = this.props
-    const { fixed, sidebarOpened } = this.state
+    const { fixed } = this.state
 
     return (
       <Responsive getWidth={getWidth} minWidth={Responsive.onlyTablet.minWidth}>
         <Visibility once={false} onBottomPassed={this.showFixedMenu} onBottomPassedReverse={this.hideFixedMenu}>
-          <Sidebar as={Menu} animation='push' inverted onHide={this.handleSidebarHide} vertical visible={sidebarOpened} style={{ minWidth: '20vw' }}>
-            <Menu.Item as={NavLink} to="/home" onClick={this.handleSidebarHide} >TO DO</Menu.Item>
-          </Sidebar>
           <Grid className="pageHeader" inverted>
             <Grid.Row className="headerBanner" columns={3}>
               <Grid.Column>
                 <Header as='h4'>{dateNow}</Header>
-                <Icon name='sidebar' onClick={this.handleToggle}></Icon>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h1' style={{display: 'inline'}}><Image src={BallImage} size="small"></Image>  MONO MAPPES <Image src={BallImage} size="small"></Image>  </Header>
+                <Header as='h1' style={{ display: 'inline' }}><Image src={BallImage} size="small"></Image>  MONO MAPPES <Image src={BallImage} size="small"></Image>  </Header>
               </Grid.Column>
               <Grid.Column>
                 <SearchBar></SearchBar>
@@ -62,10 +55,11 @@ class DesktopContainer extends Component {
             <Grid.Row className="headerMenu">
               <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size='large' >
                 <Container className="justifyCenter">
-                  <Menu.Item as={NavLink} to="/home" ><Icon name='home'></Icon></Menu.Item>
+                  <Menu.Item as={NavLink} to="/home" >Home </Menu.Item>
                   <Menu.Item as={NavLink} to="/fixtures" >Fixtures</Menu.Item>
                   <Menu.Item as={NavLink} to="/standings" >Standings</Menu.Item>
                   <Menu.Item as={NavLink} to="/stats" >Stats</Menu.Item>
+
                 </Container>
               </Menu>
             </Grid.Row>
@@ -80,7 +74,6 @@ class DesktopContainer extends Component {
 class MobileContainer extends Component {
   state = {}
 
-  // handleSidebarHide = (nav) => this.setState({ sidebarOpened: false, heightExpanded: 75 })
   handleSidebarHide = () => this.setState({ sidebarOpened: false, heightExpanded: 75 })
   navigate = (nav) => {
     this.handleSidebarHide();

@@ -1,8 +1,10 @@
 {
+  "homepage": "https://sheittanis.github.io/sports-news/",
   "name": "sports-news",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "pace": "0.0.4",
@@ -17,7 +19,9 @@
     "start": "craco start",
     "build": "craco build",
     "test": "craco test",
-    "eject": "craco eject"
+    "eject": "craco eject",    
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

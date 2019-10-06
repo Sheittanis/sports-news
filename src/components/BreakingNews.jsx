@@ -2,6 +2,7 @@ import React from 'react'
 import { Popup, Image, Container, Header, Segment, Icon } from 'semantic-ui-react'
 
 import { breakingArticle } from "../constants/Articles"
+import { Link } from "react-router-dom"
 
 const BreakingNews = () => {
 
@@ -18,7 +19,7 @@ const BreakingNews = () => {
                 </Popup>
                 <Header as='h2' color="orange">BREAKING NEWS</Header>
             </div>
-            <Image src={breakingArticle.imagesrc}></Image>
+            <Image src={breakingArticle.imagesrc} as={Link} to="/article" ></Image>
             <Header as='h2' color="orange">{breakingArticle.header}</Header>
             <Container>{breakingArticle.description}</Container>
         </Segment>

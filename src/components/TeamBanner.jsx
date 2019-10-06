@@ -15,7 +15,7 @@ const TeamBanner = (props) => {
                     </Grid.Column>
                     <Grid.Column width={10}>
                         <Container>
-                            <p>{teamData.history}  {loremIpsum()}</p>
+                            <p>{teamData.history} {loremIpsum(Math.floor((Math.random() * 100) + 100))}</p>
                         </Container>
                     </Grid.Column>
                 </Grid.Row>

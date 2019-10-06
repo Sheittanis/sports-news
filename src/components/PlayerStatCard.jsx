@@ -3,7 +3,6 @@ import React from 'react'
 import { Segment, Header, Statistic, Grid, Icon, Image } from 'semantic-ui-react'
 
 const PlayerStatCard = (props) => {
-    console.log("props", props)
     return (
         <Segment>
 
@@ -18,7 +17,7 @@ const PlayerStatCard = (props) => {
                             <Image src={props.option.teamCrest} /> {props.option.teamName}
                         </Header>
                     </Grid.Column>
-                    
+
                     <Grid.Column>
                         <Statistic>
                             <Statistic.Value>{props.option.firstStat}</Statistic.Value>

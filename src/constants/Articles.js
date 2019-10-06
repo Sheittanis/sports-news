@@ -1,6 +1,6 @@
-import Article1 from "../images/articles/1.jpg";
-import Article2 from "../images/articles/2.jpg";
-import Article3 from "../images/articles/3.jpg";
+import Article1 from "../images/articles/article1.png";
+import Article2 from "../images/articles/article2.png";
+import Article3 from "../images/articles/article3.png";
 
 import { loremIpsum } from "../utils"
 
