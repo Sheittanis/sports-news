@@ -18,7 +18,7 @@ const TeamBarOption= (props) => {
     return (
         <Segment inverted vertical className="teamBar">
             <Image className="teamOption" key={option.id} as={Link} to={newTo} //'/team' + option.path + '/:id' 
-            src={option.imageSrc} style={{ width: dynamicWidth }}/>
+            src={option.imageSrc} style={{ width: dynamicWidth, minWidth: 35 }}/>
         </Segment>
     )
 }

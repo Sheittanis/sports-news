@@ -8,6 +8,7 @@
 .ui.grid.gridLayout {
     min-height: 80vh;
     margin: 0px;
+    width: 100%
 }
 
 .ui.grid.pageHeader {

@@ -1,18 +1,18 @@
 import React from 'react'
-import { Header, Segment, Feed } from 'semantic-ui-react'
-import { loremIpsum } from "../utils"
+import { Header, Segment, Feed, Icon, Image } from 'semantic-ui-react'
 
 const LiveScoreFeed = (props) => {
-    const { selectedMatch } = props
-    console.log(props)
+    const { selectedFeed } = props
+    console.log(selectedFeed)
 
     const matchFeed = (
-        props.feed.map((option, index) =>
-            <Feed.Event key={index}>
-                <Feed.Label>Today - {loremIpsum(Math.floor((Math.random() * 10) + 10))}</Feed.Label>
+        selectedFeed.feed !== undefined && selectedFeed.feed.map((_item, index) =>
+            <Feed.Event key={index} >
+                <Feed.Label> {_item.minute}</Feed.Label>
+                <Feed.Label> <Icon name={_item.type}></Icon></Feed.Label>
                 <Feed.Content>
-                    <Feed.Summary as='a'>
-                        {loremIpsum(Math.floor((Math.random() * 50) + 10))}
+                    <Feed.Summary >
+                        {_item.matchEvent}
                     </Feed.Summary>
                 </Feed.Content>
             </Feed.Event>
@@ -21,11 +21,21 @@ const LiveScoreFeed = (props) => {
 
     return (
         <Segment vertical>
-            {selectedMatch &&
-                <Segment>
+            {selectedFeed &&
+                <Segment textAlign="center">
                     <Header as='h2' color='orange'>Match Live Thread</Header>
                     <Feed>
-                        <Header as='h2' color='orange'>teams</Header>
+                        <Header as='h3' >{selectedFeed.status}</Header>
+                        <Header as='h3' >
+                            <Image src={selectedFeed.team1}></Image>
+                            {selectedFeed.teams}
+                            <Image src={selectedFeed.team2}></Image>
+                        </Header>
+                        <Header.Subheader>
+                            {selectedFeed.team1goals}
+                            -
+                            {selectedFeed.team2goals}
+                        </Header.Subheader>
                         {matchFeed}
                     </Feed>
                 </Segment>

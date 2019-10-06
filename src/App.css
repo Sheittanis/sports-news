@@ -5,6 +5,9 @@
 .justifyCenter {
   justify-content: center !important;
 }
+.highlightedText{
+  color:#4183C4;
+}
 
 /* Styling wildcards */
 .underline {

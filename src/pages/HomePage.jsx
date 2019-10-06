@@ -1,21 +1,22 @@
 
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Grid, Image, Header, Segment } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
-import {latestArticles, articleOverview} from "../constants/Articles"
+import { latestArticles, articleOverview } from "../constants/Articles"
 import LiveScores from '../components/LiveScores'
 import TeamBar from "../components/SponsorsBar";
 import BreakingNews from '../components/BreakingNews'
 
 import windowDimensions from "../actions/WindowDimensions"
-import {Link} from "react-router-dom"
+import { withRouter, Link } from "react-router-dom"
 
-const HomePage = () => {
+const HomePage = (props) => {
+  const { history } = props
+  const [selectedMatch, setSelection] = useState();
 
   var dimensions = windowDimensions();
-  
   const isMobile = dimensions.width < 768;
 
   const latestNews = (
@@ -26,7 +27,15 @@ const HomePage = () => {
       </Grid.Column>
     )
   );
-  
+
+  useEffect(() => {
+    if (selectedMatch) {
+      history.push({
+        pathname: '/livescores',
+        state: { matchId: selectedMatch.matchId }
+      });
+    }
+  }, [selectedMatch, history]);
 
   return (
     <Grid centered >
@@ -39,7 +48,7 @@ const HomePage = () => {
         <Grid.Column computer={6} tablet={16}>
           <Segment>
             {!isMobile ? (
-              <LiveScores></LiveScores>
+              <LiveScores selectedMatch={setSelection}></LiveScores>
             ) : (
                 <Segment className="upcoming">
                   <Segment.Inline as={Link} to="/livescores">
@@ -58,7 +67,7 @@ const HomePage = () => {
       </Grid.Row>
 
 
-      <Grid.Row columns={2} style={{marginTop: '5rem'}} >
+      <Grid.Row columns={2} style={{ marginTop: '5rem' }} >
         <Grid.Column width={10}>
           <ArticleOverview articles={articleOverview}></ArticleOverview>
         </Grid.Column>
@@ -71,4 +80,4 @@ const HomePage = () => {
 
 }
 
-export default HomePage
+export default withRouter(HomePage)

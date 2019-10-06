@@ -1,19 +1,18 @@
 import React from 'react'
 import { Segment, Image, Table, Header, Item } from 'semantic-ui-react'
 
-import {liveMatches} from "../constants/LiveMatches"
-import { Link } from "react-router-dom"
+import { liveMatches } from "../constants/LiveMatches"
 
 const LiveScores = (props) => {
     const { selectedMatch } = props
 
     function matchSelected(match) {
-        selectedMatch(match)        
+        selectedMatch(match)
     }
 
     const liveScores = (
         liveMatches.map((_match, index) =>
-            <Table.Row key={_match.matchId} onClick={() => matchSelected(_match)}>
+            <Table.Row key={index} onClick={() => matchSelected(_match)}>
                 <Table.Cell>
                     <Image className="float-left" src={_match.team1} size="mini" ></Image>
                     {_match.team1goals}
@@ -22,8 +21,8 @@ const LiveScores = (props) => {
                     <div>
                         {_match.teams}
                     </div>
-                    <div ><Item as={Link} to="/home">
-                        {_match.status}</Item>
+                    <div>
+                        <Item className="highlightedText">{_match.status}</Item>
                     </div>
                 </Table.Cell>
                 <Table.Cell>
@@ -37,7 +36,7 @@ const LiveScores = (props) => {
     return (
         <Segment vertical>
             <Header as='h2' color="orange">LIVE SCORES</Header>
-            <Table striped celled textAlign="center">
+            <Table unstackable striped celled textAlign="center">
                 <Table.Header className="standingsTable">
                     <Table.Row>
                         <Table.HeaderCell>Team 1</Table.HeaderCell>
