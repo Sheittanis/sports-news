@@ -7,8 +7,7 @@ import { Link } from "react-router-dom"
 const BreakingNews = () => {
 
     return (
-        <Segment>
-            <div>
+        <Segment className="articleSegment">
                 <Popup position='top right' on="click" trigger={
                     <Icon name='search plus' className="float-right"></Icon>
                 }>
@@ -18,9 +17,8 @@ const BreakingNews = () => {
                     </Popup.Content>
                 </Popup>
                 <Header as='h2' color="orange">BREAKING NEWS</Header>
-            </div>
             <Image src={breakingArticle.imagesrc} as={Link} to="/article" ></Image>
-            <Header as='h2' color="orange">{breakingArticle.header}</Header>
+            <Header className="articleHeader" as={Link} to="/article" >{breakingArticle.header}</Header>
             <Container>{breakingArticle.description}</Container>
         </Segment>
     )

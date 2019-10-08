@@ -6,14 +6,14 @@ const ArticleOverview = (props) => {
 
     const articles = (
         props.articles.map((option, index) =>
-            <Segment key={index} style={{margin: '1rem'}}>
+            <Segment className="articleSegment" key={index} >
                 <Grid>
                     <Grid.Row columns={2}>
                         <Grid.Column >
-                            <Image src={PreviewExample}  />
+                            <Image src={PreviewExample} />
                         </Grid.Column>
 
-                        <Grid.Column>                            
+                        <Grid.Column>
                             <Header.Subheader as='h4'>{option.date} - {option.section}</Header.Subheader>
                             <Header as='h2' color="orange">{option.header}</Header>
                             <p>{option.description}</p>

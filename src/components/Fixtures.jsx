@@ -1,5 +1,6 @@
 import React from 'react'
-import { Header, Segment, Table, Image, Icon } from 'semantic-ui-react'
+import { Grid, Header, Segment, Table, Image, Icon, Item, Responsive } from 'semantic-ui-react'
+import { Link } from "react-router-dom"
 
 import data from "../constants/Fixtures"
 
@@ -10,7 +11,7 @@ const Fixtures = (props) => {
             <Table.Body key={index} style={{ marginBottom: '1rem' }}>
                 <Table.Row>
                     <Table.HeaderCell className="subHeader" colSpan='6' textAlign="center">
-                        <Header  as='h2' color='red'>{_agonistiki.header}</Header>
+                        <Header className="tableSpacerHeader" as='h2' color='red'>{_agonistiki.header}</Header>
                     </Table.HeaderCell>
                 </Table.Row>
 
@@ -18,13 +19,22 @@ const Fixtures = (props) => {
                     <Table.Row key={index}>
                         <Table.Cell>
                             <Header as='h5'>
-                                <Image className="float-left" src={_match.team1} size="mini" ></Image> <span>{_match.teams}</span>
-                                <Image className="float-right" src={_match.team2} size="mini" ></Image>
+                                <Grid>
+                                    <Grid.Row columns={3}>
+                                        <Grid.Column width={3}>
+                                            <Responsive as={Image} minWidth={1200} className="float-left" src={_match.team1} size="mini"></Responsive>
+                                        </Grid.Column>
+                                        <Grid.Column width={10}><Item>{_match.teams}</Item></Grid.Column>
+                                        <Grid.Column width={3}>
+                                            <Responsive as={Image} minWidth={1200} className="float-left" src={_match.team2} size="mini"></Responsive>
+                                        </Grid.Column>
+                                    </Grid.Row>
+                                </Grid>
                             </Header>
                         </Table.Cell>
                         <Table.Cell>{_match.date}</Table.Cell>
                         <Table.Cell>{_match.score}</Table.Cell>
-                        <Table.Cell>{_match.location}</Table.Cell>
+                        <Responsive as={Table.Cell} minWidth={900}>{_match.location}</Responsive>
                         <Table.Cell>
                             {_match.watch.length > 0 ? (
                                 <a href={_match.watch} target="_blank" rel="noopener noreferrer">
@@ -32,15 +42,14 @@ const Fixtures = (props) => {
                                 </a>
                             ) : (
                                     <span> </span>
-                            )}
+                                )}
                         </Table.Cell>
-                        <Table.Cell>{_match.article}</Table.Cell>
+                        <Table.Cell className="underline highlightedText"><Item  as={Link} to="/article">{_match.article}</Item></Table.Cell>
                     </Table.Row>
                 )}
             </Table.Body>
         )
     );
-    //gradient hover
 
     return (
         <Segment vertical>
@@ -51,7 +60,7 @@ const Fixtures = (props) => {
                         <Table.HeaderCell>Teams</Table.HeaderCell>
                         <Table.HeaderCell>Date</Table.HeaderCell>
                         <Table.HeaderCell>Result</Table.HeaderCell>
-                        <Table.HeaderCell>Location</Table.HeaderCell>
+                        <Responsive as={Table.HeaderCell} minWidth={900}>Location</Responsive>
                         <Table.HeaderCell>Highlights</Table.HeaderCell>
                         <Table.HeaderCell>Read more..</Table.HeaderCell>
                     </Table.Row>

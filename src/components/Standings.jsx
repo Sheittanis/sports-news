@@ -61,7 +61,6 @@ const Standings = () => {
             </Table.Row>
         )
     );
-    //gradient hover
 
     return (
         <Segment vertical style={{ width: '100%' }}>

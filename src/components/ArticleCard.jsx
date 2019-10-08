@@ -9,14 +9,14 @@ import { Link } from "react-router-dom"
 const ArticleCard = () => {
 
     return (
-        <Segment className="articleCard" style={{ margin: '1rem' }}>
+        <Segment className="articleSegment margin-1" >
             <Grid>
                 <Grid.Row columns={2}>
-                    <Grid.Column >
+                    <Grid.Column mobile={16} tablet={8} computer={8} >
                         <Image src={PreviewExample} as={Link} to="/article" />
                     </Grid.Column>
 
-                    <Grid.Column>
+                    <Grid.Column mobile={16} tablet={8} computer={8}>
                         <Popup position='top right' trigger={
                             <Icon name='search plus' className="float-right"></Icon>
                         }>

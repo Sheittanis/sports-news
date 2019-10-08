@@ -11,3 +11,7 @@
 .ui.segment.teamBar{
     background: transparent;
 }
+
+.ui.segment.articleSegment:hover{
+    background-color: #C6AE2329 !important;    
+}

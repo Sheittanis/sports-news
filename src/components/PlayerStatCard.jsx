@@ -9,11 +9,11 @@ const PlayerStatCard = (props) => {
             <Grid>
                 <Grid.Row columns={3}>
                     <Grid.Column >
-                        <Header as='h2'>{props.option.lastName}
+                        <Header className="margin-0" as='h2'>{props.option.lastName}
                             <Header.Subheader>{props.option.name}</Header.Subheader>
                             <Header.Subheader>{props.option.number}</Header.Subheader>
                         </Header>
-                        <Header as='h3' color="grey">
+                        <Header className="margin-0" as='h3' color="grey">
                             <Image src={props.option.teamCrest} /> {props.option.teamName}
                         </Header>
                     </Grid.Column>

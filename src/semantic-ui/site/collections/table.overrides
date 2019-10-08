@@ -42,3 +42,25 @@
         }
     }
 }
+
+.ui.table:not(.unstackable){
+    thead {
+        tr {
+            padding:0;
+            th {
+                font-size: calc(10px + 1.5vmin);
+                background: #EC1B2E;
+                color: white;
+            }
+            th:last-child{
+                border-radius: 0%;
+            }
+        }
+    }
+    tbody {
+        tr {
+            padding:0;
+        }
+    }
+
+}

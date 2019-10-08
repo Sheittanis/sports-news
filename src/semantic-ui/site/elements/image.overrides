@@ -2,5 +2,5 @@
          Site Overrides
 *******************************/
 .ui.image.teamOption:hover {
-    background: #EC1B2E;
+    background: #C6AE2329;
 }

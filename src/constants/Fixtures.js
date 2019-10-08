@@ -21,49 +21,49 @@ const Fixtures = {
                     teams: "Νέα Σαλαμίνα - ΠΑΦΟΣ FC",
                     team1: NeaSalaminaCrest,
                     team2: PafosCrest,
-                    date: "Παρασκευή 23/08/2019",
+                    date: "Friday 23/08/2019",
                     score: "1-2",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "Δόξα - Ομόνοια",
                     team1: DoxaCrest,
                     team2: OmonoiaCrest,
-                    date: "Σάββατο 24/08/2019",
+                    date: "Saturday 24/08/2019",
                     score: "0-2",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "ΑΕΛ - Ανόρθωση",
                     team1: AelCrest,
                     team2: AnorthosiCrest,
-                    date: "Κυριακή 25/08/2019",
+                    date: "Sunday 25/08/2019",
                     score: "0-0",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "ΕΝΠ - Εθνικός Άχνας",
                     team1: ParalimniCrest,
                     team2: EthnikosCrest,
-                    date: "Δευτέρα 26/08/2019",
+                    date: "Monday 26/08/2019",
                     score: "3-4",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "ΑΕΚ - Απόλλωνας",
                     team1: AekCrest,
                     team2: ApollonCrest,
-                    date: "Παρασκευή 27/09/2019",
+                    date: "Friday 27/09/2019",
                     score: " - ",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "",
                     article: " "
                 },
@@ -71,9 +71,9 @@ const Fixtures = {
                     teams: "ΑΠΟΕΛ - Ολυμπιακός",
                     team1: ApoelCrest,
                     team2: OlympiakosCrest,
-                    date: "Τετάρτη 08/01/2020",
+                    date: "Wednesday 08/01/2020",
                     score: " - ",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "",
                     article: " "
                 },
@@ -86,49 +86,49 @@ const Fixtures = {
                     teams: "ΠΑΦΟΣ FC - AEK",
                     team1: PafosCrest,
                     team2: AekCrest,
-                    date: "Παρασκευή 30/08/2019",
+                    date: "Friday 30/08/2019",
                     score: "0-2",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "Ομόνοια - Νέα Σαλαμίνα",
                     team1: OmonoiaCrest,
                     team2: NeaSalaminaCrest,
-                    date: "Σάββατο 31/08/2019",
+                    date: "Saturday 31/08/2019",
                     score: "2-0",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "ΑΕΛ - ΕΝΠ ",
                     team1: AelCrest,
                     team2: ParalimniCrest,
-                    date: "Σάββατο 31/08/2019",
+                    date: "Saturday 31/08/2019",
                     score: "2-0",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "Ολυμπιακός - Δόξα",
                     team1: OlympiakosCrest,
                     team2: DoxaCrest,
-                    date: "Κυριακή 01/09/2019",
+                    date: "Sunday 01/09/2019",
                     score: "1-1",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "https://www.youtube.com/watch?v=YJTo2qHbBPI",
-                    article: "Άρθρο Αγώνα"
+                    article: "Match Article"
                 },
                 {
                     teams: "Εθνικός Άχνας - ΑΠΟΕΛ",
                     team1: EthnikosCrest,
                     team2: ApoelCrest,
-                    date: "Τετάρτη 15/01/2020",
+                    date: "Wednesday 15/01/2020",
                     score: " - ",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "",
                     article: " "
                 },
@@ -136,9 +136,9 @@ const Fixtures = {
                     teams: "Ανόρθωση - Απόλλωνας",
                     team1: AnorthosiCrest,
                     team2: ApollonCrest,
-                    date: "Τετάρτη 02/10/2019",
+                    date: "Wednesday 02/10/2019",
                     score: " - ",
-                    location: "ΓΣΠ",
+                    location: "G.S.P",
                     watch: "",
                     article: " "
                 },

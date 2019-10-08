@@ -82,11 +82,6 @@ export const dropdownOptions = [
     key: 2,
     text: 'Team Stats',
     value: 'teamStats'
-  },
-  {
-    key: 3,
-    text: 'Misc Tabular Stats',
-    value: 'miscStats'
   }
 ];
 

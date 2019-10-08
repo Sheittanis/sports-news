@@ -21,9 +21,12 @@ const HomePage = (props) => {
 
   const latestNews = (
     latestArticles.map((_project, index) =>
+
       <Grid.Column className="marginTop-1" key={index} computer={Math.floor(16 / latestArticles.length)} >
-        <Image src={_project.imagesrc}></Image>
-        <p >{_project.description}</p>
+        <Segment className="articleSegment">
+          <Image src={_project.imagesrc}></Image>
+          <p >{_project.description}</p>
+        </Segment>
       </Grid.Column>
     )
   );

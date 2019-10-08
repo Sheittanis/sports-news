@@ -8,14 +8,17 @@
 .ui.header.teamBannerHeader{
     width: 100%;
     text-align: center;
-    font-size: 1vw;
-    // font-size: calc(12px + 1vmin);
+    // font-size: 1vw;
+    font-size: calc(12px + 1vmin);
     word-wrap: break-word;
 }
 .ui.header.articleHeader{
-    color: #ffa914;
+    color: #F2711C; //#ffa914;
 }
+.ui.header.tableSpacerHeader{
+    line-height: 2em;
+}
+
 .ui.header.articleHeader:hover{
-    color: #1e70bf !important;
-    
+    color: #1e70bf !important;    
 }

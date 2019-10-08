@@ -1,7 +1,7 @@
 
 import _ from 'lodash'
 import React, { useState } from 'react'
-import { Grid, Segment } from 'semantic-ui-react'
+import { Grid, Segment, Header } from 'semantic-ui-react'
 import ArticleCard from "../components/ArticleCard"
 import NewsFeed from "../components/NewsFeed"
 
@@ -18,8 +18,7 @@ const MobileView = (props) => {
     return (
         <Grid centered>
             <Grid.Row columns={2}>
-                
-            <Grid.Column computer={6} tablet={16}>
+                <Grid.Column computer={6} tablet={16}>
                     <TeamBanner teamData={info}></TeamBanner>
                     <NewsFeed feed={data.articleOverview}></NewsFeed>
                 </Grid.Column>
@@ -41,6 +40,7 @@ const DesktopView = (props) => {
         <Grid.Row columns={2}>
             <Grid.Column computer={10} tablet={16} >
                 <Segment>
+                    <Header as='h2' color="orange">BREAKING NEWS</Header>
                     {_.times(info.amountOfArticles, i => (
                         <ArticleCard key={i} data={i}></ArticleCard>
                     ))}
@@ -59,8 +59,8 @@ const TeamPage = (props) => {
     const [info, setInfo] = useState([]);
 
     var dimensions = windowDimensions();
-  
-    const isMobile = dimensions.width < 768;
+
+    const isDesktop = dimensions.width >= 992;
 
     useEffectAsync(async () => {
         const items = await fetchTeamData(props.match.params.teamId);
@@ -69,13 +69,11 @@ const TeamPage = (props) => {
 
     return (
         <Grid centered>
-            
-
-            {isMobile ? (
-                <MobileView info={info}></MobileView>
+            {isDesktop ? (
+                    <DesktopView info={info}></DesktopView>
             ) : (
-                <DesktopView info={info}></DesktopView>
-              )}
+                <MobileView info={info}></MobileView>
+                )}
 
         </Grid>
     )

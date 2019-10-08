@@ -23,3 +23,10 @@
         background: @secondaryBgColor;
     }
 }
+
+.ui.grid{
+    .row.teamBannerRow{
+        padding:0;
+        padding-top: 0;
+    }
+}

@@ -6,7 +6,7 @@ const NewsFeed = (props) => {
 
     const articles = (
         props.feed.map((option, index) =>
-            <Segment key={index} style={{ margin: '1rem' }}>
+            <Segment key={index} className="articleSegment">
                 <Feed.Event>
                     <Feed.Label>Today - {loremIpsum(Math.floor((Math.random() * 10) + 10))}</Feed.Label>
                     <Feed.Content>
@@ -21,8 +21,11 @@ const NewsFeed = (props) => {
 
     return (
         <Segment vertical>
+            <Segment>
             <Header as='h2' color='orange'>News Feed</Header>
             {articles}
+            </Segment>
+    
         </Segment>
     )
 }
