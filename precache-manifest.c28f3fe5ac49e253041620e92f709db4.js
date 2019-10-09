@@ -1,39 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0dcafaf6ef6a7eb84995e65ac3610f59",
+    "revision": "efb85571ff8eaf546ff83af99fcfc5fe",
     "url": "/sports-news/index.html"
   },
   {
-    "revision": "1cbd9fba3f316a173a79",
-    "url": "/sports-news/static/css/2.43e45d23.chunk.css"
+    "revision": "8ef45d751e64fab3ebbe",
+    "url": "/sports-news/static/css/2.fc6b74e6.chunk.css"
   },
   {
-    "revision": "6dcda72cf53acbf25b88",
-    "url": "/sports-news/static/css/main.ad346756.chunk.css"
+    "revision": "302f02679c90b360c849",
+    "url": "/sports-news/static/css/main.545c6836.chunk.css"
   },
   {
-    "revision": "1cbd9fba3f316a173a79",
-    "url": "/sports-news/static/js/2.7a649882.chunk.js"
+    "revision": "8ef45d751e64fab3ebbe",
+    "url": "/sports-news/static/js/2.afab8d76.chunk.js"
   },
   {
-    "revision": "6dcda72cf53acbf25b88",
-    "url": "/sports-news/static/js/main.8566ea4e.chunk.js"
+    "revision": "302f02679c90b360c849",
+    "url": "/sports-news/static/js/main.b4f26f11.chunk.js"
   },
   {
     "revision": "267f92170d45ef9294d3",
     "url": "/sports-news/static/js/runtime-main.b7caf8a8.js"
-  },
-  {
-    "revision": "5bb0e0556abcd4331e4e26d264a91642",
-    "url": "/sports-news/static/media/1.5bb0e055.jpg"
-  },
-  {
-    "revision": "359f7fc5e957be89a4d3d103224c413a",
-    "url": "/sports-news/static/media/2.359f7fc5.jpg"
-  },
-  {
-    "revision": "c7e8b339e436421765f30f1e12bcba5a",
-    "url": "/sports-news/static/media/3.c7e8b339.jpg"
   },
   {
     "revision": "30432f203ed92208fc302b847a438c42",
@@ -150,9 +138,5 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3db6b1e252fbeb3472a47be78d542471",
     "url": "/sports-news/static/media/paralimni.3db6b1e2.png"
-  },
-  {
-    "revision": "54833660da825b5a9a8640fe40f17bcf",
-    "url": "/sports-news/static/media/previewTemplate.54833660.jpg"
   }
 ]);
