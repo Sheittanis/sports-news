@@ -6,7 +6,7 @@
 }
 
 .ui.grid.gridLayout {
-    min-height: 80vh;
+    min-height: 65vh;
     margin: 0px;
     width: 100%
 }

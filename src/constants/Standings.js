@@ -24,7 +24,7 @@ const standings = [
         goalsAgainst: 4,
         points: 5,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: PafosCrest
     },
     {
         name: "ΑΕΛ",
@@ -38,7 +38,7 @@ const standings = [
         goalsAgainst: 3,
         points: 7,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: ParalimniCrest
     },
     {
         name: "ΑΝΟΡΘΩΣΗ",
@@ -52,7 +52,7 @@ const standings = [
         goalsAgainst: 1,
         points: 4,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: ApollonCrest
     },
     {
         name: "ΑΠΟΕΛ",
@@ -66,7 +66,7 @@ const standings = [
         goalsAgainst: 0,
         points: 3,
         form: ['W'],
-        upcoming: ""
+        upcoming: EthnikosCrest
     },
     {
         name: "ΑΠΟΛΛΩΝ",
@@ -80,7 +80,7 @@ const standings = [
         goalsAgainst: 3,
         points: 3,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: AnorthosiCrest
     },
     {
         name: "ΔΟΞΑ",
@@ -94,7 +94,7 @@ const standings = [
         goalsAgainst: 5,
         points: 2,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: OlympiakosCrest
     },
     {
         name: "ΕΘΝΙΚΟΣ ΑΧΝΑΣ",
@@ -108,7 +108,7 @@ const standings = [
         goalsAgainst: 4,
         points: 4,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: ApoelCrest
     },
     {
         name: "ΝΕΑ ΣΑΛΑΜΙΝΑ",
@@ -122,7 +122,7 @@ const standings = [
         goalsAgainst:6,
         points: 3,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: OmonoiaCrest
     },
     {
         name: "ΟΛΥΜΠΙΑΚΟΣ",
@@ -136,7 +136,7 @@ const standings = [
         goalsAgainst: 6,
         points: 2,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: DoxaCrest
     },
     {
         name: "ΟΜΟΝΟΙΑ",
@@ -150,7 +150,7 @@ const standings = [
         goalsAgainst: 2,
         points: 10,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: NeaSalaminaCrest
     },
     {
         name: "ΠΑΦΟΣ",
@@ -164,7 +164,7 @@ const standings = [
         goalsAgainst: 6,
         points: 3,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: AekCrest
     },
     {
         name: "ΕΝΠ",
@@ -178,7 +178,7 @@ const standings = [
         goalsAgainst: 8,
         points: 0,
         form: ['W', 'L'],
-        upcoming: ""
+        upcoming: AelCrest
     },
 ];
 

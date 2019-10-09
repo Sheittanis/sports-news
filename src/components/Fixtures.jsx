@@ -8,7 +8,7 @@ const Fixtures = (props) => {
 
     const fixtures = (
         data.agonistiki.map((_agonistiki, index) =>
-            <Table.Body key={index} style={{ marginBottom: '1rem' }}>
+            <Table.Body key={index} className="marginB-1">
                 <Table.Row>
                     <Table.HeaderCell className="subHeader" colSpan='6' textAlign="center">
                         <Header className="tableSpacerHeader" as='h2' color='red'>{_agonistiki.header}</Header>

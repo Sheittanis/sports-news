@@ -5,8 +5,7 @@ import { loremIpsum } from "../utils"
 const TeamBanner = (props) => {
     const { teamData } = props
     return (
-
-        <Segment className="teamBanner" inverted>
+        <Segment inverted>
             <Grid>
                 <Grid.Row columns={2} >
                     <Grid.Column width={6} style={{ borderRight: '1px solid white' }} >

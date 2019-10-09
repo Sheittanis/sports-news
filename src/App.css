@@ -47,6 +47,9 @@
   margin-bottom: 1rem !important;
 }
 
+.width100{
+  width:100%;
+}
 
 .imageWithText {
   align-items: center;

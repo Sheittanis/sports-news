@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <PageHeader></PageHeader>
       <TeamBar></TeamBar>
-      <Layout style={{ minHeight: '80vh' }}></Layout>
+      <Layout></Layout>
       <PageFooter></PageFooter>
     </div>
   );

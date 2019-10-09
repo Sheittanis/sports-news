@@ -3,7 +3,7 @@
 *******************************/
 
 .ui.segment.pageFooter {
-    min-height: 10vh;
+    min-height: 5vh;
     width: 100vw;
     margin: 2rem 1rem 0rem 1rem;
 }

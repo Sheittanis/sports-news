@@ -6,7 +6,7 @@ import {allArticles} from "../constants/Articles"
 const initialState = { isLoading: false, results: [], value: '' }
 
 
-export default class SearchExampleStandard extends Component {
+export default class ArticleSearch extends Component {
   state = initialState
 
   handleResultSelect = (e, { result }) => this.setState({ value: result.title })
@@ -41,6 +41,7 @@ export default class SearchExampleStandard extends Component {
             value={value}
             {...this.props}
             size="mini"
+            placeholder="Search for an article title.."
           />
     )
   }

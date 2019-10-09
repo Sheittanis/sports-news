@@ -22,3 +22,9 @@
 .ui.header.articleHeader:hover{
     color: #1e70bf !important;    
 }
+
+.ui.header.titleHeader{
+    display: inline;
+    font-size: calc(10px + 1.5vmin);
+
+}

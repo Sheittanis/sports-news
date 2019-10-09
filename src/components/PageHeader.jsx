@@ -46,7 +46,7 @@ class DesktopContainer extends Component {
                 <Header as='h4'>{dateNow}</Header>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h1' style={{ display: 'inline' }}><Image src={BallImage} size="small"></Image>  MONO MAPPES <Image src={BallImage} size="small"></Image>  </Header>
+                <Header as='h1' className="titleHeader"><Image src={BallImage} size="small"></Image>  MONO MAPPES <Image src={BallImage} size="small"></Image>  </Header>
               </Grid.Column>
               <Grid.Column>
                 <SearchBar></SearchBar>

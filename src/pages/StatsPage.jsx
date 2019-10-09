@@ -41,7 +41,7 @@ const StatsPage = () => {
       }
 
     return (
-        <Grid centered style={{ minHeight: '80vh' }} >
+        <Grid centered>
             <Grid.Row columns={2}>
                 <Container text textAlign='center'>
                     <Dropdown placeholder='Player Stats' fluid selection options={dropdownOptions} onChange={selectedMode} />

@@ -7,7 +7,7 @@ const PageFooter = () => (
     <Container className="justifyCenter">
       <Grid textAlign="center">
         <Grid.Row centered>
-          <span style={{marginRight: '1rem'}}>Copyright © 2019 </span>
+          <span className="marginR-1">Copyright © 2019 </span>
           <a href="https://www.linkedin.com/in/sheittanis/">
             <Header as="h4" color="blue" className="underline">
               <Icon name="linkedin" color="blue" />Savvas Sheittanis</Header>

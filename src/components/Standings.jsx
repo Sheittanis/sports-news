@@ -56,15 +56,15 @@ const Standings = () => {
                     )}
                 </Responsive>
                 <Responsive as={Table.Cell} minWidth={1200}>
-                    {_team.upcoming}
+                        <Image src={_team.upcoming} verticalAlign="middle" size="mini"></Image>
                 </Responsive>
             </Table.Row>
         )
     );
 
     return (
-        <Segment vertical style={{ width: '100%' }}>
-            <Header as='h2' color='red'>Βαθμολογία</Header>
+        <Segment vertical>
+            <Header as='h2' color='red'>Standings</Header>
             <Table unstackable striped celled textAlign="center">
                 <Table.Header className="standingsTable">
                     <Table.Row>
