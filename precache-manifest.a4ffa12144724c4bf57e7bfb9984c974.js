@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0cd5c0bf63d5796513dbe448aac6ec3e",
+    "revision": "023a7697792548fc90798c279841a3bb",
     "url": "/sports-news/index.html"
   },
   {
-    "revision": "8ef45d751e64fab3ebbe",
-    "url": "/sports-news/static/css/2.fc6b74e6.chunk.css"
+    "revision": "30364d58712dc179f1d6",
+    "url": "/sports-news/static/css/2.d52df4b5.chunk.css"
   },
   {
-    "revision": "8a3cc8a072f766269ee6",
+    "revision": "a12610f922d982e37681",
     "url": "/sports-news/static/css/main.545c6836.chunk.css"
   },
   {
-    "revision": "8ef45d751e64fab3ebbe",
-    "url": "/sports-news/static/js/2.afab8d76.chunk.js"
+    "revision": "30364d58712dc179f1d6",
+    "url": "/sports-news/static/js/2.597c4ae9.chunk.js"
   },
   {
-    "revision": "8a3cc8a072f766269ee6",
-    "url": "/sports-news/static/js/main.92bec1de.chunk.js"
+    "revision": "a12610f922d982e37681",
+    "url": "/sports-news/static/js/main.9776fbc0.chunk.js"
   },
   {
     "revision": "267f92170d45ef9294d3",
