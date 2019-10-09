@@ -46,7 +46,7 @@ class DesktopContainer extends Component {
                 <Header as='h4'>{dateNow}</Header>
               </Grid.Column>
               <Grid.Column>
-                <Header as='h1' className="titleHeader"><Image src={BallImage} size="small"></Image>  MONO MAPPES <Image src={BallImage} size="small"></Image>  </Header>
+                <Header as='h1' className="titleHeader"><Image src={BallImage} size="small"></Image>  SPORTS NEWS <Image src={BallImage} size="small"></Image>  </Header>
               </Grid.Column>
               <Grid.Column>
                 <SearchBar></SearchBar>
@@ -59,6 +59,7 @@ class DesktopContainer extends Component {
                   <Menu.Item as={NavLink} to="/fixtures" >Fixtures</Menu.Item>
                   <Menu.Item as={NavLink} to="/standings" >Standings</Menu.Item>
                   <Menu.Item as={NavLink} to="/stats" >Stats</Menu.Item>
+                  <Menu.Item as={NavLink} to="/archive" >Archive</Menu.Item>
 
                 </Container>
               </Menu>
@@ -80,7 +81,7 @@ class MobileContainer extends Component {
     this.setState({ currentNavigation: nav })
   }
 
-  handleToggle = () => this.setState({ sidebarOpened: true, heightExpanded: 350 })
+  handleToggle = () => this.setState({ sidebarOpened: true, heightExpanded: 200 })
 
   render() {
     const { sidebarOpened, heightExpanded, currentNavigation } = this.state;
@@ -92,6 +93,7 @@ class MobileContainer extends Component {
           <Menu.Item as={NavLink} to="/fixtures" onClick={() => this.navigate("Fixtures")} >Fixtures</Menu.Item>
           <Menu.Item as={NavLink} to="/standings" onClick={() => this.navigate("Standings")} >Standings</Menu.Item>
           <Menu.Item as={NavLink} to="/stats" onClick={() => this.navigate("Stats")} >Stats</Menu.Item>
+          <Menu.Item as={NavLink} to="/archive" onClick={() => this.navigate("Archive")} >Archive</Menu.Item>
         </Sidebar>
         <Sidebar.Pusher dimmed={sidebarOpened}>
           <Segment inverted textAlign='center' style={{ minWidth: '100vw', padding: '1em 0em', height: heightExpanded }} vertical>

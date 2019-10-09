@@ -8,7 +8,7 @@ import StatsPage from "../pages/StatsPage";
 import TeamPage from "../pages/TeamPage";
 import ArticlePage from "../pages/ArticlePage";
 import LiveScoresPage from "../pages/LiveScoresPage";
-
+import ArchivePage from "../pages/ArchivePage"
 
 
 const Routes = () => {
@@ -21,6 +21,7 @@ const Routes = () => {
             <Route path="/article" component={ArticlePage} />
             <Route path="/stats" component={StatsPage} />
             <Route path="/livescores" component={LiveScoresPage} />
+            <Route path="/archive" component={ArchivePage} />
             
 
             <Redirect to="/home" />

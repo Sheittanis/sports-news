@@ -8,8 +8,8 @@ import 'semantic-ui-less/semantic.less'
 import 'pace-js'
 import 'pace-js/themes/yellow/pace-theme-minimal.css'
 
-ReactDOM.render( <BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
-
+ReactDOM.render( <BrowserRouter basename={process.env.PUBLIC_URL + '/'}><App /></BrowserRouter>, document.getElementById('root'));
+console.log(process.env.PUBLIC_URL)
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA

@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react'
-import { Grid, Image, Header, Segment } from 'semantic-ui-react'
+import { Grid, Image, Header, Segment, Responsive } from 'semantic-ui-react'
 import ArticleOverview from "../components/ArticleOverview"
 import NewsFeed from "../components/NewsFeed"
 
@@ -21,7 +21,6 @@ const HomePage = (props) => {
 
   const latestNews = (
     latestArticles.map((_project, index) =>
-
       <Grid.Column className="marginTop-1" key={index} computer={Math.floor(16 / latestArticles.length)} >
         <Segment className="articleSegment">
           <Image src={_project.imagesrc}></Image>
@@ -64,17 +63,21 @@ const HomePage = (props) => {
       </Grid.Row>
 
       <TeamBar></TeamBar>
-      <Header as='h2' color="orange">LATEST NEWS</Header>
-      <Grid.Row columns={latestArticles.length}>
-        {latestNews}
-      </Grid.Row>
 
+      <Responsive as={Grid} minWidth={800}>
+        <Grid.Row>
+          <Header as='h2' color="orange" className="pageTitle">LATEST NEWS</Header>
+        </Grid.Row>
+        <Grid.Row columns={latestArticles.length}>
+          {latestNews}
+        </Grid.Row>
+      </Responsive>
 
-      <Grid.Row columns={2} style={{ marginTop: '5rem' }} >
-        <Grid.Column width={10}>
+      <Grid.Row columns={2}>
+        <Grid.Column computer={10} mobile={16}>
           <ArticleOverview articles={articleOverview}></ArticleOverview>
         </Grid.Column>
-        <Grid.Column width={6}>
+        <Grid.Column computer={6} mobile={16}>
           <NewsFeed feed={articleOverview}></NewsFeed>
         </Grid.Column>
       </Grid.Row>

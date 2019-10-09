@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, Segment, Container, Grid, Responsive } from 'semantic-ui-react'
+import { Image, Segment, Grid, Responsive } from 'semantic-ui-react'
 
 import windowDimensions from "../actions/WindowDimensions"
 import data from "../constants/TeamBarOptions"
