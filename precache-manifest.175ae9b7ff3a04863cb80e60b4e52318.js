@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fdb2b33c28636ca5214210516a150c79",
+    "revision": "0cd5c0bf63d5796513dbe448aac6ec3e",
     "url": "/sports-news/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sports-news/static/css/2.fc6b74e6.chunk.css"
   },
   {
-    "revision": "ca4fd006318474eaf1ca",
+    "revision": "8a3cc8a072f766269ee6",
     "url": "/sports-news/static/css/main.545c6836.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sports-news/static/js/2.afab8d76.chunk.js"
   },
   {
-    "revision": "ca4fd006318474eaf1ca",
-    "url": "/sports-news/static/js/main.27a02b92.chunk.js"
+    "revision": "8a3cc8a072f766269ee6",
+    "url": "/sports-news/static/js/main.92bec1de.chunk.js"
   },
   {
     "revision": "267f92170d45ef9294d3",
