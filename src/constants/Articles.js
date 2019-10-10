@@ -1,38 +1,41 @@
-import Article1 from "../images/articles/article1.png";
-import Article2 from "../images/articles/article2.png";
-import Article3 from "../images/articles/article3.png";
+import faker from "faker"
 
-import { loremIpsum } from "../utils"
+const BreakingArticle = {
+    title: "Article 1",
+    section: faker.lorem.sentences(10),
+    header: faker.lorem.sentence(),
+    description: faker.lorem.words(30),
+    date: "10/09/2019",
+    url: "",
+    peek: faker.lorem.words(30),
+}
 
 const FirstArticle = {
-    imagesrc: Article1,
     title: "Article 1",
-    section: loremIpsum(10),
-    header: loremIpsum(25),
-    description: loremIpsum(100),
+    section: faker.lorem.sentences(10),
+    header: faker.lorem.sentence(),
+    description: faker.lorem.words(30),
     date: "10/09/2019",
     url: "",
-    peek: "",
+    peek: faker.lorem.words(30),
 }
 const SecondArticle = {
-    imagesrc: Article2,
     title: "Article 2",
-    section: loremIpsum(10),
-    header: loremIpsum(25),
-    description: loremIpsum(100),
+    section: faker.lorem.sentences(10),
+    header: faker.lorem.sentence(),
+    description: faker.lorem.words(30),
     date: "10/09/2019",
     url: "",
-    peek: "",
+    peek: faker.lorem.words(30),
 }
 const ThirdArticle = {
-    imagesrc: Article3,
     title: "Article 3",
-    section: loremIpsum(10),
-    header: loremIpsum(25),
-    description: loremIpsum(100),
+    section: faker.lorem.sentences(10),
+    header: faker.lorem.sentence(),
+    description: faker.lorem.words(30),
     date: "10/09/2019",
     url: "",
-    peek: "",
+    peek: faker.lorem.words(30),
 }
 
 
@@ -42,4 +45,4 @@ export const latestArticles = [FirstArticle, SecondArticle, ThirdArticle]
 
 export const articleOverview = [FirstArticle, SecondArticle, ThirdArticle]
 
-export const breakingArticle = FirstArticle
+export const breakingArticle = BreakingArticle

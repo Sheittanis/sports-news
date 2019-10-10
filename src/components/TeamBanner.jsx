@@ -1,6 +1,5 @@
 import React from 'react'
 import { Header, Grid, Image, Container, Segment, Responsive } from 'semantic-ui-react'
-import { loremIpsum } from "../utils"
 
 const TeamBanner = (props) => {
     const { teamData } = props
@@ -14,7 +13,7 @@ const TeamBanner = (props) => {
                     <Grid.Column width={10}>
                         <Container>
                             <Header className="teamBannerHeader" as='h1' color='orange'>{teamData.teamName} </Header>
-                            <p>{teamData.history} {loremIpsum(Math.floor((Math.random() * 100) + 100))}</p>
+                            <p>{teamData.history}</p>
                         </Container>
                     </Grid.Column>
                 </Grid.Row>
@@ -27,7 +26,7 @@ const TeamBanner = (props) => {
                 </Grid.Row>
                 <Grid.Row>
                     <Container>
-                        <p>{teamData.history} {loremIpsum(Math.floor((Math.random() * 100) + 100))}</p>
+                        <p>{teamData.history}</p>
                     </Container>
                 </Grid.Row>
             </Responsive>

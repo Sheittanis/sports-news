@@ -3,7 +3,6 @@ import React, {useState, useEffect} from 'react'
 import { Grid } from 'semantic-ui-react'
 import LiveScores from "../components/LiveScores"
 import LiveScoreFeed from "../components/LiveScoreFeed"
-import data from "../constants/HomeArticles"
 import { liveFeed } from "../constants/LiveMatches"
 
 const LiveScoresPage = (props) => {
@@ -44,7 +43,7 @@ const LiveScoresPage = (props) => {
 
             <Grid.Row>
                 <Grid.Column width={16}>
-                    <LiveScoreFeed feed={data.articleOverview} selectedFeed={selectedFeed}></LiveScoreFeed>
+                    <LiveScoreFeed selectedFeed={selectedFeed}></LiveScoreFeed>
                 </Grid.Column>
             </Grid.Row>
         </Grid>

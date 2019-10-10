@@ -11,100 +11,102 @@ import OmonoiaCrest from "../images/crests/omonoia.png";
 import PafosCrest from "../images/crests/pafos.png";
 import ParalimniCrest from "../images/crests/paralimni.png";
 
+import faker from "faker"
+
 const ApoelData = {
   teamName: "ΑΠΟΕΛ",
   crest: ApoelCrest,
-  history: "Ο ΑΠΟΕΛ ιδρύθηκε το 1926.",
-  amountOfArticles: 10,
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 7,
   amountOfNews: 5
 }
 
 const AekData = {
   teamName: "ΑΕΚ",
   crest: AekCrest,
-  history: "",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 5,
+  amountOfNews: 3
 }
 
 const AelData = {
   teamName: "ΑΕΛ",
   crest: AelCrest,
-  history: "",
-  amountOfArticles: 10,
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 4,
   amountOfNews: 5
 }
 
 const AnorthosiData = {
   teamName: "ΑΝΟΡΘΩΣΗ",
   crest: AnorthosiCrest,
-  history: "",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 5,
+  amountOfNews: 2
 }
 
 const ApollonData = {
   teamName: "ΑΠΟΛΛΩΝ",
   crest: ApollonCrest,
-  history: "",
-  amountOfArticles: 10,
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 5,
   amountOfNews: 5
 }
 
 const DoxaData = {
   teamName: "ΔΟΞΑ",
   crest: DoxaCrest,
-  history: "",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 2,
+  amountOfNews: 3
 }
 
 const EthnikosData = {
   teamName: "ΕΘΝΙΚΟΣ ΑΧΝΑΣ",
   crest: EthnikosCrest,
-  history: "",
-  amountOfArticles: 10,
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 5,
   amountOfNews: 5
 }
 
 const NeaSalaminaData = {
   teamName: "ΝΕΑ ΣΑΛΑΜΙΝΑ",
   crest: NeaSalaminaCrest,
-  history: "",
-  amountOfArticles: 10,
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 5,
   amountOfNews: 5
 }
 
 const OlympiakosData = {
   teamName: "ΟΛΥΜΠΙΑΚΟΣ",
   crest: OlympiakosCrest,
-  history: "",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 2,
+  amountOfNews: 2
 }
 
 const PafosData = {
   teamName: "ΠΑΦΟΣ FC",
   crest: PafosCrest,
-  history: "",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 3,
+  amountOfNews: 3
 }
 
 const OmonoiaData = {
   teamName: "ΟΜΟΝΟΙΑ",
   crest: OmonoiaCrest,
-  history: "Η ΟΜΟΝΟΙΑ ιδρύθηκε το 2018.",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 6,
+  amountOfNews: 6
 }
 
 const ParalimniData = {
   teamName: "ΕΝΠ",
   crest: ParalimniCrest,
-  history: "",
-  amountOfArticles: 10,
-  amountOfNews: 5
+  history: faker.lorem.sentences(3),
+  amountOfArticles: 2,
+  amountOfNews: 7
 }
 
 

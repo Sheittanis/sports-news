@@ -2,25 +2,23 @@
 import React from 'react'
 import { Grid, Image, Header } from 'semantic-ui-react'
 import Article from "../components/Article"
-import NewsFeed from "../components/NewsFeed"
+import RelatedArticles from "../components/RelatedArticles"
 
-import data from "../constants/HomeArticles"
-import PreviewExample from "../images/previews/previewExample.png"
 
-import { loremIpsum } from "../utils"
+import faker from "faker"
 const ArticlePage = () => {
 
     return (
         <Grid centered >
             <Grid.Row columns={2}>
-                <Grid.Column width={12}>
-                    <Header as='h2' color='red'>{loremIpsum(Math.floor((Math.random() * 100) + 10))}</Header>
-                    <Image src={PreviewExample} size="massive" />
+                <Grid.Column mobile={16} tablet={12} computer={12}>
+                <Header className="articleHeader">{faker.lorem.sentence()}</Header>
+                    <Image src={faker.image.sports()} size="massive" />
                     <Article></Article>
                 </Grid.Column>
                 
-                <Grid.Column width={4}>
-                    <NewsFeed feed={data.articleOverview}></NewsFeed>
+                <Grid.Column mobile={16} tablet={4} computer={4}>
+                    <RelatedArticles feed={1}></RelatedArticles>
                 </Grid.Column>
             </Grid.Row>
         </Grid>

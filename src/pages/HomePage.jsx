@@ -11,6 +11,7 @@ import BreakingNews from '../components/BreakingNews'
 
 import windowDimensions from "../actions/WindowDimensions"
 import { withRouter, Link } from "react-router-dom"
+import faker from "faker"
 
 const HomePage = (props) => {
   const { history } = props
@@ -21,9 +22,9 @@ const HomePage = (props) => {
 
   const latestNews = (
     latestArticles.map((_project, index) =>
-      <Grid.Column className="marginTop-1" key={index} computer={Math.floor(16 / latestArticles.length)} >
+      <Grid.Column className="marginT-1" key={index} computer={Math.floor(16 / latestArticles.length)} >
         <Segment className="articleSegment">
-          <Image src={_project.imagesrc}></Image>
+          <Image src={`${faker.image.sports()}?random=${Date.now()}`}></Image>
           <p >{_project.description}</p>
         </Segment>
       </Grid.Column>
