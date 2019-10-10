@@ -22,7 +22,7 @@ const Standings = () => {
     var newArr = _.orderBy(data, 'points', 'desc')
     const fixtures = (
         newArr.map((_team, index) =>
-            <Table.Row key={index}>
+            <Table.Row key={index} className="tableRow">
                 <Responsive as={Table.Cell} minWidth={800}>{index + 1}</Responsive>
                 <Table.Cell textAlign="left">
                     <Responsive as={Image} minWidth={1200}>

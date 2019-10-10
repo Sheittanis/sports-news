@@ -1,12 +1,3 @@
 /*******************************
          Site Overrides
 *******************************/
-.ui.fixed.top.menu {
-    background: #1B1C1D;
-    .item {
-        color: rgba(255, 255, 255, 0.7) !important;
-    }
-    .item:active{
-        background: grey;
-    }
-}

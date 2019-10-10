@@ -12,3 +12,61 @@
     font-size: calc(10px + 1vmin);
     color: @primaryTextColor;
 }
+
+.App-link {
+    color: #61dafb;
+}
+
+.justifyCenter {
+    justify-content: center !important;
+}
+
+.highlightedText {
+    color: @altTextColor;
+}
+
+/* Styling wildcards */
+.underline {
+    text-decoration: underline;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.margin-0 {
+    margin: 0 !important;
+}
+
+.margin-1 {
+    margin: 1rem;
+}
+
+.marginL-1 {
+    margin-left: 1rem !important;
+}
+
+.marginR-1 {
+    margin-right: 1rem !important;
+}
+
+.marginT-1 {
+    margin-top: 1rem !important;
+}
+
+.marginB-1 {
+    margin-bottom: 1rem !important;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.imageWithText {
+    align-items: center;
+    display: flex !important;
+}

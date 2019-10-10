@@ -53,7 +53,7 @@ class DesktopContainer extends Component {
               </Grid.Column>
             </Grid.Row>
             <Grid.Row className="headerMenu">
-              <Menu fixed={fixed ? 'top' : null} inverted={!fixed} pointing={!fixed} secondary={!fixed} size='large' >
+              <Menu fixed={fixed ? 'top' : null} inverted pointing={!fixed} secondary={!fixed} size='large' >
                 <Container className="justifyCenter">
                   <Menu.Item as={NavLink} to="/home" >Home </Menu.Item>
                   <Menu.Item as={NavLink} to="/fixtures" >Fixtures</Menu.Item>

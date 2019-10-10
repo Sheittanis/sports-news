@@ -12,7 +12,7 @@ const NewsFeed = (props) => {
                     <Feed.Content>
                         <Feed.Summary as='a'>
                             {loremIpsum(Math.floor((Math.random() * 50) + 10))}
-                            </Feed.Summary>
+                        </Feed.Summary>
                     </Feed.Content>
                 </Feed.Event>
             </Segment>
@@ -21,11 +21,11 @@ const NewsFeed = (props) => {
 
     return (
         <Segment vertical>
-            <Segment>
-            <Header as='h2' color='orange'>News Feed</Header>
-            {articles}
+            <Segment inverted>
+                <Header as='h2' color='orange'>News Feed</Header>
+                {articles}
             </Segment>
-    
+
         </Segment>
     )
 }

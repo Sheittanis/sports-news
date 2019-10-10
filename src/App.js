@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 
 import PageHeader from "./components/PageHeader";
 import PageFooter from "./components/PageFooter";

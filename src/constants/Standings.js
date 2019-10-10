@@ -23,7 +23,7 @@ const standings = [
         goalsfor: 6,
         goalsAgainst: 4,
         points: 5,
-        form: ['W', 'L'],
+        form: ['W', 'D', 'D'],
         upcoming: PafosCrest
     },
     {
@@ -37,7 +37,7 @@ const standings = [
         goalsfor: 3,
         goalsAgainst: 3,
         points: 7,
-        form: ['W', 'L'],
+        form: ['W', 'L', 'W', 'D'],
         upcoming: ParalimniCrest
     },
     {
@@ -93,7 +93,7 @@ const standings = [
         goalsfor: 2,
         goalsAgainst: 5,
         points: 2,
-        form: ['W', 'L'],
+        form: ['D', 'D', 'L'],
         upcoming: OlympiakosCrest
     },
     {
@@ -107,7 +107,7 @@ const standings = [
         goalsfor: 5,
         goalsAgainst: 4,
         points: 4,
-        form: ['W', 'L'],
+        form: ['W', 'D'],
         upcoming: ApoelCrest
     },
     {
@@ -121,7 +121,7 @@ const standings = [
         goalsfor: 4,
         goalsAgainst:6,
         points: 3,
-        form: ['W', 'L'],
+        form: ['W', 'L', 'L'],
         upcoming: OmonoiaCrest
     },
     {
@@ -135,7 +135,7 @@ const standings = [
         goalsfor: 5,
         goalsAgainst: 6,
         points: 2,
-        form: ['W', 'L'],
+        form: ['D', 'L', 'D'],
         upcoming: DoxaCrest
     },
     {
@@ -149,7 +149,7 @@ const standings = [
         goalsfor: 7,
         goalsAgainst: 2,
         points: 10,
-        form: ['W', 'L'],
+        form: ['W', 'W', 'W', 'D'],
         upcoming: NeaSalaminaCrest
     },
     {
@@ -163,7 +163,7 @@ const standings = [
         goalsfor: 4,
         goalsAgainst: 6,
         points: 3,
-        form: ['W', 'L'],
+        form: ['W', 'L', 'L'],
         upcoming: AekCrest
     },
     {
@@ -177,7 +177,7 @@ const standings = [
         goalsfor: 4,
         goalsAgainst: 8,
         points: 0,
-        form: ['W', 'L'],
+        form: ['L', 'L', 'L'],
         upcoming: AelCrest
     },
 ];

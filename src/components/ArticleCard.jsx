@@ -7,7 +7,6 @@ import { loremIpsum, getCurrentDate } from "../utils"
 import { Link } from "react-router-dom"
 
 const ArticleCard = () => {
-
     return (
         <Segment className="articleSegment margin-1" >
             <Grid>

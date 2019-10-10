@@ -17,7 +17,7 @@ const TeamBarOption = (props) => {
     };
     return (
         <Segment inverted vertical className="teamBar">
-            <Image className="teamOption" key={option.id} as={Link} to={newTo} src={option.imageSrc} style={{ width: dynamicWidth, minWidth: 35 }} />
+            <Image className="teamOption" key={option.id} as={Link} to={newTo} src={option.imageSrc} style={{ width: props.width }} />
         </Segment>
     )
 }
@@ -28,16 +28,16 @@ const TeamBar = () => {
     var _second = data.slice(_splitArrayLength)
 
     const desktopOptions = (
-        data.map((option, index) => <TeamBarOption key={index} option={option}></TeamBarOption>
+        data.map((option, index) => <TeamBarOption key={index} option={option} width={50}></TeamBarOption>
         )
     );
 
     const mobileOptionsFirst = (
-        _first.map((option, index) => <TeamBarOption key={index} option={option}></TeamBarOption>
+        _first.map((option, index) => <TeamBarOption key={index} option={option}  width={40}></TeamBarOption>
         )
     );
     const mobileOptionsSecond = (
-        _second.map((option, index) => <TeamBarOption key={index} option={option}></TeamBarOption>
+        _second.map((option, index) => <TeamBarOption key={index} option={option}  width={40}></TeamBarOption>
         )
     );
 
@@ -46,13 +46,14 @@ const TeamBar = () => {
     return (
         <Segment inverted vertical className="teamBar">
                 <Grid centered>
-                    <Responsive as={Grid.Row} minWidth={525}>
+                    <Responsive as={Grid.Row} minWidth={750}>
                         {desktopOptions}
                     </Responsive>
-                    <Responsive className="teamBannerRow" as={Grid.Row} maxWidth={524}>
+
+                    <Responsive className="teamBannerRow" as={Grid.Row} maxWidth={749}>
                         {mobileOptionsFirst}
                     </Responsive>
-                    <Responsive  className="teamBannerRow" as={Grid.Row} maxWidth={524}>
+                    <Responsive  className="teamBannerRow" as={Grid.Row} maxWidth={749}>
                         {mobileOptionsSecond}
                     </Responsive>
                 </Grid>

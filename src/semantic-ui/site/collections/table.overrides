@@ -8,9 +8,8 @@
         tr {
             th {
                 font-size: calc(10px + 1.5vmin);
-                background: #EC1B2E;
-                color: white;
-                // color: rgba(44, 52, 70, 0.32);
+                background: @primaryBgColor;
+                color: @secondaryTextColor;
             }
         }
     }
@@ -24,20 +23,21 @@
     }
 
     tbody {
-        tr:hover {
-            background: linear-gradient(#337CAB, #000000) !important;
-            color: white !important;
+        tr.tableRow:hover {
+            background: @hoverGradient !important;
+            color: @secondaryTextColor !important;
 
             td {
-                h5 {
-                    color: white
+                text-decoration-color: @secondaryTextColor;
+                a {
+                    color: @secondaryTextColor;
                 }
             }
         }
 
         tr {
             th.subHeader {
-                background: rgba(44, 52, 70, 0.32);
+                background: @subheaderColor;
             }
         }
     }
@@ -49,8 +49,8 @@
             padding:0;
             th {
                 font-size: calc(10px + 1.5vmin);
-                background: #EC1B2E;
-                color: white;
+                background: @primaryBgColor;
+                color: @secondaryTextColor;
             }
             th:last-child{
                 border-radius: 0%;

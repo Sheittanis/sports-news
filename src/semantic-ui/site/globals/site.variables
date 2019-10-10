@@ -1,11 +1,20 @@
 /*******************************
      User Global Variables
 *******************************/
+@pageBgColor: #e7e7e7;
+
 @primaryTextColor: black;
 @secondaryTextColor: white;
+@altTextColor: #4183C4;
 
 @primaryBgColor: #ec1b2e;
 @secondaryBgColor: #1B1C1D;
 @invertBgColor: white;
 
-@pageBgColor: white;
+@hoverGradient: linear-gradient(#337CAB, #000000);
+@primaryHover: #1e70bf;
+@secondaryHover: grey;
+@altHover: #C6AE2329;
+
+@headerColor: #F2711C; //#ffa914;
+@subheaderColor: rgba(44, 52, 70, 0.32);

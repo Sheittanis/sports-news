@@ -13,5 +13,5 @@
 }
 
 .ui.segment.articleSegment:hover{
-    background-color: #C6AE2329 !important;    
+    background-color: @altHover !important;    
 }

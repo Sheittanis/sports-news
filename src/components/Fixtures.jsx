@@ -16,7 +16,7 @@ const Fixtures = (props) => {
                 </Table.Row>
 
                 {_agonistiki.matches.map((_match, index) =>
-                    <Table.Row key={index}>
+                    <Table.Row className="tableRow" key={index}>
                         <Table.Cell>
                             <Header as='h5'>
                                 <Grid>
