@@ -24,8 +24,10 @@ const HomePage = (props) => {
     latestArticles.map((_project, index) =>
       <Grid.Column className="marginT-1" key={index} computer={Math.floor(16 / latestArticles.length)} >
         <Segment className="articleSegment">
-          <Image src={`${faker.image.sports()}?random=${Date.now()}`}></Image>
-          <p >{_project.description}</p>
+          <Grid as={Link} to="/article" >
+            <Image src={`${faker.image.sports()}?random=${Date.now()}`}></Image>
+            <p >{_project.description}</p>
+          </Grid>
         </Segment>
       </Grid.Column>
     )
@@ -43,15 +45,15 @@ const HomePage = (props) => {
   return (
     <Grid centered >
       <Grid.Row columns={2}>
-        <Grid.Column computer={10} tablet={16}>
+        <Grid.Column computer={10} tablet={16} className="marginT-1">
           <BreakingNews></BreakingNews>
         </Grid.Column>
 
 
         <Grid.Column computer={6} tablet={16}>
-          <Segment>
+          <Segment className="marginT-1">
             {!isMobile ? (
-              <LiveScores selectedMatch={setSelection}></LiveScores>
+              <LiveScores selectedMatch={setSelection} ></LiveScores>
             ) : (
                 <Segment className="upcoming">
                   <Segment.Inline as={Link} to="/livescores">
@@ -79,7 +81,7 @@ const HomePage = (props) => {
           <ArticleOverview articles={articleOverview}></ArticleOverview>
         </Grid.Column>
         <Grid.Column computer={6} mobile={16}>
-          <NewsFeed feed={articleOverview}></NewsFeed>
+          <NewsFeed feed={5}></NewsFeed>
         </Grid.Column>
       </Grid.Row>
     </Grid>

@@ -8,10 +8,10 @@ import faker from "faker"
 const ArticleCard = () => {
     return (
         <Segment className="articleSegment margin-1" >
-            <Grid>
+            <Grid as={Link} to="/article" >
                 <Grid.Row columns={2}>
                     <Grid.Column mobile={16} tablet={8} computer={8} >
-                        <Image src={`${faker.image.sports()}?random=${Date.now()}`} as={Link} to="/article" />
+                        <Image src={`${faker.image.sports()}?random=${Date.now()}`} />
                     </Grid.Column>
 
                     <Grid.Column mobile={16} tablet={8} computer={8}>
@@ -25,7 +25,7 @@ const ArticleCard = () => {
                         </Popup>
 
                         <Header.Subheader as='h4'>{formatDate(faker.date.past())}</Header.Subheader>
-                        <Header className="articleHeader" as={Link} to="/article">{faker.lorem.sentence()}</Header>
+                        <Header className="articleHeader">{faker.lorem.sentence()}</Header>
                         <p>{faker.lorem.sentences(2)}</p>
                     </Grid.Column>
                 </Grid.Row>

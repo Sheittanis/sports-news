@@ -15,3 +15,8 @@
 .ui.segment.articleSegment:hover{
     background-color: @altHover !important;    
 }
+.ui.segment.articleSegment {
+    .ui.grid {
+        color: @primaryTextColor;
+    }
+}

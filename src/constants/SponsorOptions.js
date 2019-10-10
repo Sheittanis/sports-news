@@ -1,24 +1,24 @@
-import ApoelCrest from "../images/crests/apoel.png";
+import faker from "faker"
 const options = [
     {
-        url: "http://www.apoelfc.com.cy/",
-        imageSrc: ApoelCrest
+        url: "https://savvassheittanis.com/",
+        imageSrc: faker.image.cats()
     },
     {
-        url: "http://www.apoelfc.com.cy/",
-        imageSrc: ApoelCrest
+        url: "https://savvassheittanis.com/",
+        imageSrc: faker.image.cats()
     },
     {
-        url: "http://www.apoelfc.com.cy/",
-        imageSrc: ApoelCrest
+        url: "https://savvassheittanis.com/",
+        imageSrc: faker.image.cats()
     },
     {
-        url: "http://www.apoelfc.com.cy/",
-        imageSrc: ApoelCrest
+        url: "https://savvassheittanis.com/",
+        imageSrc: faker.image.cats()
     }, 
     {
-        url: "http://www.apoelfc.com.cy/",
-        imageSrc: ApoelCrest
+        url: "https://savvassheittanis.com/",
+        imageSrc: faker.image.cats()
     }
 ];
 
