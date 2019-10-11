@@ -1,23 +1,21 @@
 import React from 'react'
 import { Image, Segment, Grid, Responsive } from 'semantic-ui-react'
 
-import windowDimensions from "../actions/WindowDimensions"
 import data from "../constants/TeamBarOptions"
 import { Link } from "react-router-dom"
 
 const TeamBarOption = (props) => {
     const { option } = props;
-    var dimensions = windowDimensions();
 
-    const dynamicWidth = dimensions.width * 0.05;
-    // const dynamicHeight = dimensions.width * 0.35;
     const newTo = {
         pathname: "/team" + option.path,
         team: option.name
     };
     return (
-        <Segment inverted vertical className="teamBar">
-            <Image className="teamOption" key={option.id} as={Link} to={newTo} src={option.imageSrc} style={{ width: props.width }} />
+        <Segment as={Link}  to={newTo}  inverted vertical className="teamBar">
+            <Responsive as={Image} minWidth={750}className="teamOption" key={option.id}src={option.imageSrc} style={{ width: 50 }} ></Responsive>
+            <Responsive as={Image} minWidth={401} maxWidth={749} className="teamOption" key={option.id}src={option.imageSrc} style={{ width: 40 }} ></Responsive>
+            <Responsive as={Image} maxWidth={400} className="teamOption" key={option.id}src={option.imageSrc} style={{ width: 30 }} ></Responsive>
         </Segment>
     )
 }
@@ -28,16 +26,16 @@ const TeamBar = () => {
     var _second = data.slice(_splitArrayLength)
 
     const desktopOptions = (
-        data.map((option, index) => <TeamBarOption key={index} option={option} width={50}></TeamBarOption>
+        data.map((option, index) => <TeamBarOption key={index} option={option}></TeamBarOption>
         )
     );
 
     const mobileOptionsFirst = (
-        _first.map((option, index) => <TeamBarOption key={index} option={option}  width={40}></TeamBarOption>
+        _first.map((option, index) => <TeamBarOption key={index} option={option} ></TeamBarOption>
         )
     );
     const mobileOptionsSecond = (
-        _second.map((option, index) => <TeamBarOption key={index} option={option}  width={40}></TeamBarOption>
+        _second.map((option, index) => <TeamBarOption key={index} option={option} ></TeamBarOption>
         )
     );
 
@@ -45,18 +43,17 @@ const TeamBar = () => {
 
     return (
         <Segment inverted vertical className="teamBar">
-                <Grid centered>
-                    <Responsive as={Grid.Row} minWidth={750}>
-                        {desktopOptions}
-                    </Responsive>
-
-                    <Responsive className="teamBannerRow" as={Grid.Row} maxWidth={749}>
-                        {mobileOptionsFirst}
-                    </Responsive>
-                    <Responsive  className="teamBannerRow" as={Grid.Row} maxWidth={749}>
-                        {mobileOptionsSecond}
-                    </Responsive>
-                </Grid>
+            <Grid centered>
+                <Responsive as={Grid.Row} minWidth={750}>
+                    {desktopOptions}
+                </Responsive>
+                <Responsive className="teamBannerRow" as={Grid.Row} maxWidth={749}>
+                    {mobileOptionsFirst}
+                </Responsive>
+                <Responsive className="teamBannerRow" as={Grid.Row} maxWidth={749}>
+                    {mobileOptionsSecond}
+                </Responsive>
+            </Grid>
         </Segment>
     )
 }
